@@ -13,7 +13,6 @@ const LanguageSelectorNavItem = () => {
       {t("Lang: ")}
       <select
         onChange={(evt) => {
-          console.log(evt.target.value);
           changeLanguage(evt.target.value);
         }}
         value={i18n.language}
