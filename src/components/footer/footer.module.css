@@ -1,0 +1,21 @@
+.pageFooter {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.footerText {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  width: 100%;
+  top: 50px;
+}
+
+.meadow {
+  background: url(./img/meadow.png) repeat center;
+  height: 130px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
