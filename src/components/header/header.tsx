@@ -31,7 +31,7 @@ export const Header = () => {
       <div className={styles.title}>
         <img src={hime} className={styles.chLogo} />
       </div>
-      <nav className="siteNav">
+      <nav className={styles.siteNav}>
         <NavItem>Home</NavItem>
         <NavItem>Projects</NavItem>
         <NavItem>{t("About")}</NavItem>
