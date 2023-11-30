@@ -1,0 +1,26 @@
+.article {
+  position: relative;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-image: url(./img/clouds_large.png);
+  background-repeat: repeat;
+}
+
+.main {
+  padding: 4rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.castle {
+  position: absolute;
+  left: 50%;
+  margin-left: -73px;
+  bottom: 90px;
+  height: 150px;
+}

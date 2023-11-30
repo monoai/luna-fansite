@@ -1,0 +1,27 @@
+:root {
+  font-size: 16px;
+  --header-color: #cbf0ff;
+  --header-color: #fff;
+  --body-color: #FFF9FB;
+  --body-color: #cbf0ff;
+  font-family: 'Nunito', sans-serif;
+}
+
+body, #root {
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
