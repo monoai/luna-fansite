@@ -2,12 +2,13 @@
   font-size: 16px;
   --header-color: #cbf0ff;
   --header-color: #fff;
-  --body-color: #FFF9FB;
+  --body-color: #fff9fb;
   --body-color: #cbf0ff;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-body, #root {
+body,
+#root {
   background-color: var(--body-color);
   display: flex;
   flex-direction: column;
@@ -22,6 +23,8 @@ body, #root {
   width: 100%;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }

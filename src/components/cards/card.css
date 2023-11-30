@@ -1,28 +1,36 @@
 .card {
-    min-height: 200px;
-    padding: 2rem 1rem 0;
-    background: #ffebc2;
-    box-shadow: 4px 4px 0 rgba(0,0,0,.1);
-    background-image:
-      linear-gradient(
-        90deg,
-        #ffebc2 12px, 0,
-        rgba(0,0,0,.1) 15px, 0,
-        var(--body-color) 20px, 0,
-        #ffebc2 100%
-      ),
-      radial-gradient(
-        circle closest-side,
-        rgba(255,255,255,0) 88%,
-        #ffebc2 100%
-      ),
-      radial-gradient(
-        circle at 22px 8px,
-        var(--body-color) 40%,
-        rgba(0,0,0,.1) 40%,
-        rgba(0,0,0,.1) 100%
-      );
-    background-size: 32px 8px, 32px 16px, 32px 16px;
-    background-repeat: space no-repeat;
-    background-position: center top, center 6px, center 6px;
-  }
+  min-height: 200px;
+  padding: 2rem 1rem 0;
+  background: #ffebc2;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(
+      90deg,
+      #ffebc2 12px,
+      0,
+      rgba(0, 0, 0, 0.1) 15px,
+      0,
+      var(--body-color) 20px,
+      0,
+      #ffebc2 100%
+    ),
+    radial-gradient(
+      circle closest-side,
+      rgba(255, 255, 255, 0) 88%,
+      #ffebc2 100%
+    ),
+    radial-gradient(
+      circle at 22px 8px,
+      var(--body-color) 40%,
+      rgba(0, 0, 0, 0.1) 40%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  background-size:
+    32px 8px,
+    32px 16px,
+    32px 16px;
+  background-repeat: space no-repeat;
+  background-position:
+    center top,
+    center 6px,
+    center 6px;
+}

@@ -5,4 +5,4 @@ export const Footer = () => (
     <div className="footer-text">Footer text here</div>
     <div className="meadow"></div>
   </footer>
-)
+);
