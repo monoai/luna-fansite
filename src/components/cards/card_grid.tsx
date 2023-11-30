@@ -1,6 +1,6 @@
 import * as React from "react";
-import "./card_grid.css";
+import styles from "./card_grid.module.css";
 
 export const CardGrid = (props: React.PropsWithChildren<{}>) => (
-  <div className="cardGrid">{props.children}</div>
+  <div className={styles.cardGrid}>{props.children}</div>
 );

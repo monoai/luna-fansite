@@ -1,10 +1,10 @@
-.page-footer {
+.pageFooter {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
 
-.footer-text {
+.footerText {
   position: absolute;
   z-index: 3;
   text-align: center;

@@ -1,5 +1,5 @@
 import hime from "./img/Channel_Logo_-_Himemori_Luna_01.png";
-import "./header.css";
+import styles from "./header.module.css";
 import { NavItem } from "./nav_item";
 import { useTranslation } from "react-i18next";
 import { LanguageLoader } from "../language_selector";
@@ -28,20 +28,20 @@ const LanguageSelectorNavItem = () => {
 export const Header = () => {
   const { t } = useTranslation();
   return (
-    <header id="page-header">
-      <div id="title">
-        <img src={hime} id="ch-logo" />
+    <header className={styles.pageHeader}>
+      <div className={styles.title}>
+        <img src={hime} className={styles.chLogo} />
       </div>
-      <nav id="site-nav">
+      <nav className="siteNav">
         <NavItem>Home</NavItem>
         <NavItem>Projects</NavItem>
         <NavItem>{t("About")}</NavItem>
         <LanguageSelectorNavItem />
         {/* Home <span className="menudot">•</span> Projects <span className="menudot">•</span> About <span className="menudot">•</span> Lang: EN */}
       </nav>
-      <div className="top-divider">
-        <div className="moon-and-star-divider"></div>
-        <div className="wave-divider"></div>
+      <div className={styles.topDivider}>
+        <div className={styles.moonAndStarDivider}></div>
+        <div className={styles.waveDivider}></div>
       </div>
     </header>
   );
