@@ -2,21 +2,21 @@ import hime from './img/Channel_Logo_-_Himemori_Luna_01.png';
 import "./header.css";
 import { NavItem } from './nav_item';
 import { useTranslation } from 'react-i18next';
-import { withLanguageSelector } from '../language_selector';
+import { LanguageLoader } from '../language_selector';
+import { useContext } from 'react';
 
-const LangugeSelector = (props: { changeLanguage: (lang: string) => Promise<void> }) => {
+const LanguageSelectorNavItem = () => {
+  const {changeLanguage} = useContext(LanguageLoader);
   const { t, i18n } = useTranslation()
   return <NavItem>{t('Lang: ')}<select onChange={evt => {
     console.log(evt.target.value);
-    props.changeLanguage(evt.target.value)
+    changeLanguage(evt.target.value)
   }} value={i18n.language}>
     <option value={'en'}>{t('en')}</option>
     <option value={'ja'}>{t('ja')}</option>
   </select></NavItem>
 
 }
-
-const LanguageSelectorNavItem = withLanguageSelector(LangugeSelector);
 
 export const Header = () => {
   const { t } = useTranslation()
