@@ -3,7 +3,11 @@ import styles from "./map.module.css";
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker, Polygon, Pane, Circle, Tooltip} from 'react-leaflet'
 
 export const Map = () => {
-
+    const markers: [number,number][] = [
+      [10,10],
+      [11,11],
+      [15,15],
+    ]
     // item positions
     // probably make a array with a struct for seperate countries so when displaying without map, it is organised by countries
     const view: [number, number] = [51.505, -0.09];
@@ -16,22 +20,32 @@ export const Map = () => {
     const final: [number, number] = [10,10];
     const potato: [number, number] = [10,10];
     var merge = 1;
+
+    //running for loop to generate all the coordinates
+    const return_format_markers = [];
+
+    for (var val of markers) {
+      console.log(val);
+      return_format_markers.push(
+        <Marker position={[val[0],val[1]]}>
+          <Tooltip offset={[0,-10]} direction = "center" permanent className = {styles.number_icon}>
+            {merge}
+          </Tooltip>
+        </Marker>
+        );
+      };
     return(
       //map container adjust from ./map.modules.css
-      <MapContainer center={final} zoom={13} className={styles.map}>
+      <MapContainer center={[15,15]} zoom={13} className={styles.map}>
         <TileLayer
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={19}
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         />
 
-        /**ALL MARKERS HAVE A POPUP
-         single point marker*/
-         <Marker position={final}>
-           <Tooltip offset={[0,-10]} direction = "center" permanent className = {styles.number_icon}>
-             {merge}
-           </Tooltip>
-         </Marker>
+         {return_format_markers}
+
+
         <Marker position={marker}>
           <Popup>
             marker :D <br /> Easily customizable.
