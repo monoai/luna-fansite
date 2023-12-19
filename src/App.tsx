@@ -14,6 +14,7 @@ function App() {
       <div className="article">
         <main className="main">
           <Map></Map>
+          <br/>
           <CardGrid>
             <Card>Hi</Card>
             <Card>Hi</Card>
