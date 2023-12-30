@@ -1,12 +1,5 @@
 .map{
-  height: 400px;
+  height: 90vh;
   width: 100%;
   overflow: hidden;
-}
-.number_icon {
-  background-color: rgb(244,0,0, 0.8) !important;
-  -webkit-text-stroke: 1px black !important;
-  border: none !important;
-  border-radius: 7px !important;
-  line-height: 0.5 !important;
 }

@@ -13,7 +13,8 @@ function App() {
       <Header />
       <div className="article">
         <main className="main">
-          <Map></Map>
+          <Map />
+          <br />
           <CardGrid>
             <Card>Hi</Card>
             <Card>Hi</Card>
