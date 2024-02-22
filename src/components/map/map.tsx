@@ -1,19 +1,18 @@
 //imported styles and locations (later add icons)
 import styles from "./map.module.css";
-import { coords } from "./locations"
+import { coords, instances } from "../submissions/locations"
 
 //downloaded packages link
-import { MapContainer, TileLayer, Marker} from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Tooltip} from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import 'leaflet/dist/leaflet.css'
-
 
 //leaflet defaults broke on me somehow.... this is completely unesssary unless its broken like me
 import L from 'leaflet';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
 
-const defaultIcon = L.icon({
+L.Marker.prototype.options.icon = L.icon({
   iconUrl,
   shadowUrl,
   iconSize: [25, 41],
@@ -21,21 +20,27 @@ const defaultIcon = L.icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-
-L.Marker.prototype.options.icon = defaultIcon;
 //delete up to here to check if defaults are working
+
+// for (var object of instances) {
+//   object.log();
+// }
 
 
 export const Map = () => {
 
     //running for loop to generate all the coordinates
     //any suggestion to elimnate this variable for more effecient runtime?
+    for (var object of instances) {
+      object.log()
+    }
     const markers = [];
 
-    for (var val of coords) {
-      console.log(val);
+    for (var object of instances) {
       markers.push(
-        <Marker position={[val[0],val[1]]}>
+        <Marker position={[object.coords[0],object.coords[1]]}>
+          <Tooltip offset={[15,-40]} direction = "center" permanent className = {styles.numberIcon}>
+          </Tooltip>
         </Marker>
         );
       };
