@@ -3,7 +3,7 @@ import styles from "./map.module.css";
 import { coords, instances } from "./locations"
 
 //downloaded packages link
-import { MapContainer, TileLayer, Marker, Tooltip} from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Tooltip, useMapEvents} from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import 'leaflet/dist/leaflet.css'
 
@@ -25,28 +25,65 @@ L.Marker.prototype.options.icon = L.icon({
 // for (var object of instances) {
 //   object.log();
 // }
+const MyComponent = () => {
+
+  const map = useMapEvents({
+    click(e) {
+
+      const overlay = document.getElementById("overlay");
+
+      if(overlay == null){
+      console.log("asdfkjan")
+      return null
+      }
+
+      console.log("reduce")
+      overlay.style.transform = "translateX(100%)";
+
+    },
+  })
+
+  return null
+}
+
+
 var toggle_status = false
-function load_infomation(toggle_status: boolean) {
-    console.log()
-    var overlay = document.getElementById("overlay");
+function load_infomation(toggle_status: boolean, username: string, message: string, image: string) {
+
+    const overlay = document.getElementById("overlay");
+
     if(overlay == null){
       console.log("asdfkjan")
       return toggle_status;
     }
-    if (toggle_status == true){
-      console.log("small")
-      overlay.style.transform = "translateX(100%)";
-    }
-    else{
-      console.log("large")
+
+    const out_name = overlay.querySelector('#username');
+    const out_message = overlay.querySelector('#message');
+    const out_image = overlay.querySelector('#image');
+
+    if (!toggle_status){
+
+      if (out_name && out_message && out_image){
+        out_name.innerHTML = `${username}`
+        out_message.innerHTML = `${message}`
+        console.log("expanded")
+      }else{
+        console.log("ERR output fields are not found")
+        return toggle_status
+      }
       overlay.style.transform = "translateX(0%)";
     }
-    toggle_status = !toggle_status;
+
+    console.log(out_name, out_message, out_image);
     return toggle_status
 }
 
 var Overlay = () => (
-  <div className={styles.overlay_container} id = "overlay">hello!!</div>
+  <div className={styles.overlay_container} id = "overlay">
+    <h1 id = "username">user name</h1>
+    <p id = "message">message</p>
+    <div id = "image"></div>
+  </div>
 );
 export const Map = () => {
 
@@ -63,10 +100,14 @@ export const Map = () => {
           position={[object.coords[0],object.coords[1]]}
           eventHandlers={{
             click: () => {
-              toggle_status = load_infomation(toggle_status)
+              toggle_status = load_infomation(toggle_status,
+                                              object.user_name,
+                                              object.message,
+                                              object.file_path)
             }
           }}>
-          <Tooltip offset={[15,-40]} direction = "center" permanent className = {styles.numberIcon}>
+          <Tooltip offset={[15,-40]} direction = "center"
+                   permanent className = {styles.numberIcon}>
           </Tooltip>
         </Marker>
         );
@@ -84,8 +125,6 @@ export const Map = () => {
           </Tooltip>
         </Marker>
         );
-
-
 
     return(
       <div>
@@ -114,7 +153,7 @@ export const Map = () => {
         <MarkerClusterGroup chunkedLoading>
          {markers}
         </MarkerClusterGroup>
-
+        <MyComponent />
       </MapContainer>
       </div>
     );
