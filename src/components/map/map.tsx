@@ -1,6 +1,6 @@
 //imported styles and locations (later add icons)
 import styles from "./map.module.css";
-import { coords, instances } from "../submissions/locations"
+import { coords, instances } from "./locations"
 
 //downloaded packages link
 import { MapContainer, TileLayer, Marker, Tooltip} from 'react-leaflet'
@@ -25,8 +25,29 @@ L.Marker.prototype.options.icon = L.icon({
 // for (var object of instances) {
 //   object.log();
 // }
+var toggle_status = false
+function load_infomation(toggle_status: boolean) {
+    console.log()
+    var overlay = document.getElementById("overlay");
+    if(overlay == null){
+      console.log("asdfkjan")
+      return toggle_status;
+    }
+    if (toggle_status == true){
+      console.log("small")
+      overlay.style.transform = "translateX(100%)";
+    }
+    else{
+      console.log("large")
+      overlay.style.transform = "translateX(0%)";
+    }
+    toggle_status = !toggle_status;
+    return toggle_status
+}
 
-
+var Overlay = () => (
+  <div className={styles.overlay_container} id = "overlay">hello!!</div>
+);
 export const Map = () => {
 
     //running for loop to generate all the coordinates
@@ -38,14 +59,39 @@ export const Map = () => {
 
     for (var object of instances) {
       markers.push(
-        <Marker position={[object.coords[0],object.coords[1]]}>
+        <Marker
+          position={[object.coords[0],object.coords[1]]}
+          eventHandlers={{
+            click: () => {
+              toggle_status = load_infomation(toggle_status)
+            }
+          }}>
           <Tooltip offset={[15,-40]} direction = "center" permanent className = {styles.numberIcon}>
           </Tooltip>
         </Marker>
         );
       };
 
+      markers.push(
+        <Marker
+          position={[15,15]}
+          eventHandlers={{
+            click: () => {
+              console.log(`hello?`)
+            }
+          }}>
+          <Tooltip offset={[15,-40]} direction = "center" permanent className = {styles.numberIcon}>
+          </Tooltip>
+        </Marker>
+        );
+
+
+
     return(
+      <div>
+        <div className = {styles.float_boundaries}>
+          <Overlay />
+        </div>
       <MapContainer
           className={styles.map}
           zoom={1.5}
@@ -70,5 +116,6 @@ export const Map = () => {
         </MarkerClusterGroup>
 
       </MapContainer>
+      </div>
     );
   };

@@ -1,3 +1,7 @@
+import styles from "./map.module.css";
+
+import { MapContainer, TileLayer, Marker, Tooltip} from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
 //location export in the format of latling (-y,x)
 export const coords: [number, number][] =
   [
@@ -26,7 +30,7 @@ export const coords: [number, number][] =
     }
 
     log() {
-      console.log(this.user_name, this.message, this.coords, this.file_path)
+      console.log(this.user_name +", "+ this.message +", "+ this.coords +", "+ this.file_path)
     }
   }
 
