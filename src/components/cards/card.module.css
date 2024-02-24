@@ -34,3 +34,14 @@
     center 6px,
     center 6px;
 }
+.message{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding-left:10px;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.image{
+
+}

@@ -1,5 +1,6 @@
 import "./App.css";
 import { Header } from "./components/header/header";
+import { Map } from "./components/map/map";
 import { CardGrid } from "./components/cards/card_grid";
 import { Card } from "./components/cards/card";
 import castle from "./img/castle.png";
@@ -12,6 +13,8 @@ function App() {
       <Header />
       <div className="article">
         <main className="main">
+          <Map />
+          <br />
           <CardGrid>
             <Card>Hi</Card>
             <Card>Hi</Card>
