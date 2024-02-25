@@ -1,6 +1,13 @@
 :root {
   --height: 90vh;
 }
+.flexmap {
+    display: flex;
+    height: var(--height);
+    width: 90%;
+    flex: 1 1;
+}
+
 .map {
   height: var(--height);
   width: 90%;
@@ -21,7 +28,7 @@
   align-content: center;
   position: absolute;
   left: calc((10% + 20px) / 2);
-  width: calc(90% - 20px);
+  width: calc(60% - 20px);
   height: calc(var(--height) - 20px);
   transform: translateY(calc(-5vh + 10px));
   margin-left: 10;

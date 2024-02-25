@@ -23,34 +23,35 @@ function App() {
       <Header />
       <div className="article">
         <main className="main" ref={(c) => (container.current = c)}>
-          <Map
-            innerRef={(m, o) => {
-              map.current = m;
-              // TODO: This should probably come from a provider
-              openOverlay.current = o;
-            }}
-          />
-          <br />
-          <CardGrid>
-            {instances.map((instance, i) => (
-              <Card
-                key={i}
-                message={instance.message}
-                name={instance.user_name}
-                onClick={() => {
-                  container?.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                  map.current?.flyTo(instance.coords, 5);
-                  openOverlay.current?.({
-                    name: instance.user_name,
-                    message: instance.message,
-                    username: instance.user_name,
-                  });
-                }}
-              />
-            ))}
-          </CardGrid>
+          <div className="map-list">
+            <Map
+              innerRef={(m, o) => {
+                map.current = m;
+                // TODO: This should probably come from a provider
+                openOverlay.current = o;
+              }}
+            />
+            <CardGrid>
+              {instances.map((instance, i) => (
+                <Card
+                  key={i}
+                  message={instance.message}
+                  name={instance.user_name}
+                  onClick={() => {
+                    container?.current?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                    map.current?.flyTo(instance.coords, 5);
+                    openOverlay.current?.({
+                      name: instance.user_name,
+                      message: instance.message,
+                      username: instance.user_name,
+                    });
+                  }}
+                />
+              ))}
+            </CardGrid>
+          </div>
         </main>
         <img src={castle} className="castle"></img>
         <Footer />

@@ -111,7 +111,7 @@ export const Map = (props: {
   }, []);
 
   return (
-    <div>
+    <div className={styles.flexmap}>
       <div className={styles.float_boundaries}>
         <Overlay {...overlayInfo} />
       </div>
