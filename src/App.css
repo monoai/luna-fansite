@@ -19,6 +19,12 @@
   z-index: 2;
 }
 
+.map-list {
+  display:flex;
+  max-width: 100%;
+  flex-flow: row;
+}
+
 .castle {
   position: absolute;
   left: 50%;

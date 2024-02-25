@@ -1,8 +1,9 @@
 .cardGrid {
-
   padding: 0 50px 0px 50px;
   margin: auto;
-  max-width: 1200px;
+  height: 90vh;
+  max-width: 50%;
+  overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 2rem;
