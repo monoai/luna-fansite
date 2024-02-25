@@ -13,7 +13,7 @@ export const coords: [number, number][] = [
 class marker_details {
   message: string;
   user_name: string;
-  coords: number[];
+  coords: [number, number];
   file_path: string;
 
   // unreliable image input, most likely format first to export
@@ -56,4 +56,4 @@ const hillo = new marker_details(
   "./file//path",
 );
 
-export var instances = [test_user, hillo, test_user_1];
+export var instances = [test_user, hillo, test_user_1, test_user_1, test_user_1, test_user_1, test_user_1, test_user_1];

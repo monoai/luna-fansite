@@ -60,7 +60,19 @@ var Overlay = (props: {
     <div>{props.image && <img src={props.image} />}</div>
   </div>
 );
-export const Map = (props: { innerRef?: (map: L.Map) => void }) => {
+
+type OverlayInfo = {
+  open: boolean;
+  message?: string;
+  username?: string;
+};
+
+export const Map = (props: {
+  innerRef?: (
+    map: L.Map,
+    openOverlay: (info: Omit<OverlayInfo, "open">) => void,
+  ) => void;
+}) => {
   const [overlayInfo, setOverlayInfo] = useState<{
     open: boolean;
     message?: string;
@@ -99,12 +111,16 @@ export const Map = (props: { innerRef?: (map: L.Map) => void }) => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.flexmap}>
       <div className={styles.float_boundaries}>
         <Overlay {...overlayInfo} />
       </div>
       <MapContainer
-        ref={props.innerRef}
+        ref={(m) =>
+          props.innerRef?.(m!, (info) =>
+            setOverlayInfo({ ...info, open: true }),
+          )
+        }
         className={styles.map}
         zoom={1.5}
         center={[30, 0]}

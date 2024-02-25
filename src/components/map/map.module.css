@@ -1,6 +1,15 @@
 :root {
   --height: 90vh;
 }
+.flexmap {
+    display: flex;
+    position: relative;
+    height: var(--height);
+    width: 90%;
+    flex: 1 1;
+    margin: auto;
+}
+
 .map {
   height: var(--height);
   width: 90%;
