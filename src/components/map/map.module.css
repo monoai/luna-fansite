@@ -1,0 +1,53 @@
+.map {
+  flex: 1;
+  height: 100%;
+  min-height: 100%;
+  border: 3px dashed #ed9dcd;
+  border-radius: 10px;
+}
+
+@media (max-width: 680px) {
+  .map {
+    max-height: 30vh;
+    min-width: 95vw;
+    width: 95vw;
+    margin-bottom: 20px;
+  }
+}
+
+.numberIcon {
+  background-color: #ed9dcd !important;
+  border: none !important;
+  line-height: 0.5;
+}
+
+.float_boundaries {
+  align-content: center;
+  position: absolute;
+  left: calc((10% + 20px) / 2);
+  width: calc(90% - 20px);
+  height: calc(var(--height) - 20px);
+  transform: translateY(calc(-5vh + 10px));
+  margin-left: 10;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.overlay_container {
+  margin-left: auto;
+  margin-right: 0;
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  right: 0;
+  transform: translateX(100%);
+  pointer-events: auto;
+  background-color: rgb(250, 250, 250, 0.9);
+  z-index: 11;
+  transition: all 0.5s ease-in;
+}
+
+.overlay_open {
+  transform: translateX(0%);
+}

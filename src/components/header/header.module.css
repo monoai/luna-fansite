@@ -4,11 +4,12 @@
   background-image: url(./img/candy_pattern.png);
   background-repeat: repeat-x;
   background-position: center;
-  min-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  flex-shrink: 0;
 }
 
 .siteNav {
@@ -50,7 +51,7 @@
 }
 
 .chLogo {
-  height: 150px;
+  height: 100px;
 }
 
 .subtitle {

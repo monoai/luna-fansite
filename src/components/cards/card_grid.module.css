@@ -1,8 +1,20 @@
 .cardGrid {
-  margin: auto;
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
-  grid-gap: 2rem;
-  justify-content: center;
+  /* padding: 0px 0px 0px 30px; */
+  min-width: 450px;
+  max-width: 450px;
+  height: 100%;
+
+  overflow: auto;
+
+  flex-grow: 1;
+}
+
+@media (max-width: 680px) {
+  .cardGrid {
+    /* overflow-y: auto; */
+    max-width: 95%;
+    flex: 1;
+    padding: 0px;
+    height: auto;
+  }
 }
