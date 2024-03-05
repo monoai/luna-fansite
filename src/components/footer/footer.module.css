@@ -1,21 +1,19 @@
+.castle {
+  width: 70px;
+  position: relative;
+  bottom: 10px;
+}
+
 .pageFooter {
-  overflow: hidden;
+  flex-shrink: 0;
+  height: 150px;
   width: 100%;
-  position: relative;
-}
 
-.footerText {
-  position: absolute;
-  z-index: 3;
-  text-align: center;
-  width: 100%;
-  top: 50px;
-}
+  padding-bottom: 10px;
 
-.meadow {
-  background: url(./img/meadow.png) repeat center;
-  height: 130px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+  background: url(./img/meadow.png) repeat-x center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column-reverse;
 }

@@ -1,34 +1,27 @@
-.article {
-  position: relative;
-  flex-grow: 2;
-  display: flex;
-  flex-direction: column;
+.main {
+  width: 100%;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   background-image: url(./img/clouds_large.png);
   background-repeat: repeat;
   background-position-x: center;
   background-position-y: -20px;
-}
 
-.main {
-  padding: 4rem 0;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.map-list {
-  display:flex;
-  max-width: 100%;
+  padding: 15px 30px 5px 30px;
+  display: flex;
   flex-flow: row;
-}
 
-.castle {
-  position: absolute;
-  left: 50%;
-  margin-left: -73px;
-  bottom: 90px;
-  height: 150px;
+  gap: 30px;
+
+  overflow: hidden;
+
+  /* position: relative; */
+
+  flex-grow: 1;
 }
+/* 
+@media (max-width: 680px) {
+  .main {
+    display: block;
+  }
+} */
