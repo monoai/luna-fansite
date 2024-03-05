@@ -64,18 +64,16 @@ export const Card = React.forwardRef(
       detailsSection = <div style={{ textAlign: "right" }}>{xButton}</div>;
     }
 
+    let img_root = process.env.PUBLIC_URL + "/user/img/";
+
     let pfp_src = props.post.has_profile_photo
-      ? process.env.PUBLIC_URL +
-        "/img_assets/" +
-        props.post.id.toString().padStart(3, "0") +
-        ".pfp.jpg"
+      ? img_root + props.post.id.toString().padStart(3, "0") + ".pfp.jpg"
       : defaultPfp;
 
     let images = [];
     for (let i = 0; i < props.post.num_attachments; i++) {
       let img_path =
-        process.env.PUBLIC_URL +
-        "/img_assets/" +
+        img_root +
         props.post.id.toString().padStart(3, "0") +
         "." +
         (i + 1) +
