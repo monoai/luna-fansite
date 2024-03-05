@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/luna-fansite/static/css/main.2b7fdf93.css",
-    "main.js": "/luna-fansite/static/js/main.338bb05a.js",
+    "main.css": "/luna-fansite/static/css/main.93b2bd29.css",
+    "main.js": "/luna-fansite/static/js/main.57b597ce.js",
     "static/js/787.84506305.chunk.js": "/luna-fansite/static/js/787.84506305.chunk.js",
     "static/media/Channel_Logo_-_Himemori_Luna_01.png": "/luna-fansite/static/media/Channel_Logo_-_Himemori_Luna_01.de1d38dca4b68b5f4925.png",
     "static/media/clouds_large.png": "/luna-fansite/static/media/clouds_large.70a34263b74cd873f64f.png",
+    "static/media/x-logo-black.png": "/luna-fansite/static/media/x-logo-black.c9d69acfaf852c0ddb71.png",
     "static/media/meadow.png": "/luna-fansite/static/media/meadow.0cc39ad8b9365a534051.png",
     "static/media/castle.png": "/luna-fansite/static/media/castle.23f0a221313cf0e78a4f.png",
     "static/media/candy_pattern.png": "/luna-fansite/static/media/candy_pattern.c63658328d3ddb6cdbf8.png",
     "index.html": "/luna-fansite/index.html",
-    "main.2b7fdf93.css.map": "/luna-fansite/static/css/main.2b7fdf93.css.map",
-    "main.338bb05a.js.map": "/luna-fansite/static/js/main.338bb05a.js.map",
+    "main.93b2bd29.css.map": "/luna-fansite/static/css/main.93b2bd29.css.map",
+    "main.57b597ce.js.map": "/luna-fansite/static/js/main.57b597ce.js.map",
     "787.84506305.chunk.js.map": "/luna-fansite/static/js/787.84506305.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b7fdf93.css",
-    "static/js/main.338bb05a.js"
+    "static/css/main.93b2bd29.css",
+    "static/js/main.57b597ce.js"
   ]
 }
