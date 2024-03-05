@@ -1,63 +1,68 @@
 import "./App.css";
 import { Header } from "./components/header/header";
-import { Map } from "./components/map/map";
+import { Map as WorldMap } from "./components/map/map";
 import { CardGrid } from "./components/cards/card_grid";
 import { Card } from "./components/cards/card";
-import castle from "./img/castle.png";
 import { Footer } from "./components/footer/footer";
 import { LanguageLoaderProvider } from "./components/language_selector";
-import { instances } from "./components/map/locations";
+import { fetchPosts, UserPost } from "./posts";
 import L from "leaflet";
-import { useRef } from "react";
+import { createRef, useEffect, useRef, useState } from "react";
 
-function App() {
+export default function App() {
   const map: React.MutableRefObject<L.Map | undefined> = useRef(undefined);
-  const openOverlay: React.MutableRefObject<
-    | ((opts: { name: string; message: string; username: string }) => void)
-    | undefined
-  > = useRef(undefined);
   const container: React.MutableRefObject<HTMLElement | null> = useRef(null);
+
+  let cardRefs = new Map<number, React.RefObject<HTMLDivElement>>();
+
+  const [posts, setPosts] = useState<UserPost[]>([]);
+
+  useEffect(() => {
+    fetchPosts((posts: UserPost[]) => {
+      setPosts(posts);
+    });
+  }, []);
 
   return (
     <LanguageLoaderProvider>
       <Header />
-      <div className="article">
-        <main className="main" ref={(c) => (container.current = c)}>
-          <div className="map-list">
-            <Map
-              innerRef={(m, o) => {
-                map.current = m;
-                // TODO: This should probably come from a provider
-                openOverlay.current = o;
-              }}
-            />
-            <CardGrid>
-              {instances.map((instance, i) => (
-                <Card
-                  key={i}
-                  message={instance.message}
-                  name={instance.user_name}
-                  onClick={() => {
-                    container?.current?.scrollIntoView({
-                      behavior: "smooth",
-                    });
-                    map.current?.flyTo(instance.coords, 5);
-                    openOverlay.current?.({
-                      name: instance.user_name,
-                      message: instance.message,
-                      username: instance.user_name,
-                    });
-                  }}
-                />
-              ))}
-            </CardGrid>
-          </div>
-        </main>
-        <img src={castle} className="castle"></img>
-        <Footer />
-      </div>
+      <main className="main" ref={(c) => (container.current = c)}>
+        <WorldMap
+          posts={posts}
+          cardRefs={cardRefs}
+          innerRef={(m, o) => {
+            map.current = m;
+            // TODO: This should probably come from a provider
+            // openOverlay.current = o;
+          }}
+        />
+        <CardGrid>
+          {posts.map((post, i) => {
+            const cardRef = createRef<HTMLDivElement>();
+
+            cardRefs.set(post.id, cardRef);
+
+            return (
+              <Card
+                ref={cardRef}
+                key={"card" + i}
+                post={post}
+                onClick={() => {
+                  container?.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+
+                  if (post.location) {
+                    let location = post.location!;
+                    map.current?.flyTo([location.lat, location.long], 5);
+                  }
+                }}
+              />
+            );
+          })}
+        </CardGrid>
+      </main>
+      <Footer />
     </LanguageLoaderProvider>
   );
 }
-
-export default App;

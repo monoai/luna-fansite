@@ -56,4 +56,13 @@ const hillo = new marker_details(
   "./file//path",
 );
 
-export var instances = [test_user, hillo, test_user_1, test_user_1, test_user_1, test_user_1, test_user_1, test_user_1];
+export var instances = [
+  test_user,
+  hillo,
+  test_user_1,
+  test_user_1,
+  test_user_1,
+  test_user_1,
+  test_user_1,
+  test_user_1,
+];

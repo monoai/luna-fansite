@@ -2,7 +2,6 @@ import classnames from "classnames";
 
 //imported styles and locations (later add icons)
 import styles from "./map.module.css";
-import { instances } from "./locations";
 
 //downloaded packages link
 import {
@@ -20,6 +19,7 @@ import L from "leaflet";
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
 import { useEffect, useState } from "react";
+import { UserPost } from "../../posts";
 
 L.Marker.prototype.options.icon = L.icon({
   iconUrl,
@@ -29,11 +29,7 @@ L.Marker.prototype.options.icon = L.icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-//delete up to here to check if defaults are working
 
-// for (var object of instances) {
-//   object.log();
-// }
 const MyComponent = (props: { closeOverlay: () => void }) => {
   useMapEvents({
     click() {
@@ -68,6 +64,8 @@ type OverlayInfo = {
 };
 
 export const Map = (props: {
+  posts: UserPost[];
+  cardRefs: Map<number, React.RefObject<HTMLDivElement>>;
   innerRef?: (
     map: L.Map,
     openOverlay: (info: Omit<OverlayInfo, "open">) => void,
@@ -79,20 +77,20 @@ export const Map = (props: {
     username?: string;
   }>({ open: false });
 
-  const [markers, setMarkers] = useState<JSX.Element[]>([]);
-
-  useEffect(() => {
-    const tempMarkers: JSX.Element[] = [];
-    instances.forEach((object) => {
-      tempMarkers.push(
+  let markers = props.posts
+    .filter((post) => post.location != null)
+    .map((post: UserPost, i) => {
+      return (
         <Marker
-          position={[object.coords[0], object.coords[1]]}
+          key={i}
+          position={[post.location!.lat, post.location!.long]}
           eventHandlers={{
             click: () => {
-              setOverlayInfo({
-                username: object.user_name,
-                message: object.message,
-                open: true,
+              let cardDiv = props.cardRefs.get(post.id)!.current!;
+              let rect = cardDiv.getBoundingClientRect();
+              // cardDiv.parentElement!.scroll(0, rect.top + 80);
+              cardDiv.scrollIntoView({
+                behavior: "smooth",
               });
             },
           }}
@@ -102,51 +100,38 @@ export const Map = (props: {
             direction="center"
             permanent
             className={styles.numberIcon}
-          ></Tooltip>
-        </Marker>,
+          >
+            {post.discord_or_nickname}
+          </Tooltip>
+        </Marker>
       );
     });
-    setMarkers(tempMarkers);
-    // Todo: markers should be a prop and this should depend on that
-  }, []);
 
   return (
-    <div className={styles.flexmap}>
-      <div className={styles.float_boundaries}>
-        <Overlay {...overlayInfo} />
-      </div>
-      <MapContainer
-        ref={(m) =>
-          props.innerRef?.(m!, (info) =>
-            setOverlayInfo({ ...info, open: true }),
-          )
-        }
-        className={styles.map}
-        zoom={1.5}
-        center={[30, 0]}
-        zoomSnap={0.5}
-        maxZoom={9}
-        minZoom={1.5}
-        maxBounds={[
-          [-1000, -Infinity],
-          [1000, Infinity],
-        ]}
-        inertia={true}
-        //(funny inertiaDeceleration = {1})
-        inertiaDeceleration={4000}
-        worldCopyJump={true}
-      >
-        <TileLayer
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        />
-
-        {/*everything here is clustered*/}
-        <MarkerClusterGroup maxClusterRadius={50}>{markers}</MarkerClusterGroup>
-        <MyComponent
-          closeOverlay={() => setOverlayInfo((v) => ({ ...v, open: false }))}
-        />
-      </MapContainer>
-    </div>
+    <MapContainer
+      ref={(m) =>
+        props.innerRef?.(m!, (info) => setOverlayInfo({ ...info, open: true }))
+      }
+      className={styles.map}
+      zoom={1.5}
+      center={[30, 0]}
+      zoomSnap={0.5}
+      maxZoom={10}
+      minZoom={1}
+      maxBounds={[
+        [-1000, -Infinity],
+        [1200, Infinity],
+      ]}
+      inertia={true}
+      //(funny inertiaDeceleration = {1})
+      inertiaDeceleration={4000}
+      worldCopyJump={true}
+    >
+      <TileLayer
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      />
+      {markers}
+    </MapContainer>
   );
 };
