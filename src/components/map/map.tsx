@@ -145,9 +145,9 @@ export const Map = (props: {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
-      <MarkerClusterGroup maxClusterRadius={40}>
+      {/* <MarkerClusterGroup maxClusterRadius={40}> */}
       {markers}
-      </MarkerClusterGroup>
+      {/* </MarkerClusterGroup> */}
     </MapContainer>
   );
 };
