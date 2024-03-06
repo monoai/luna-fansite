@@ -50,3 +50,8 @@
 .overlay_open {
   transform: translateX(0%);
 }
+
+.map_icon {
+  border-radius: 50%;
+  border: 3px solid pink;
+}

@@ -1,4 +1,4 @@
-import classnames from "classnames";
+// import classnames from "classnames";
 
 //imported styles and locations (later add icons)
 import styles from "./map.module.css";
@@ -9,16 +9,17 @@ import {
   TileLayer,
   Marker,
   Tooltip,
-  useMapEvents,
+  // useMapEvents,
 } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import "leaflet/dist/leaflet.css";
+import defaultPfp from "../cards/img/default_pfp.png";
 
 //leaflet defaults broke on me somehow.... this is completely unesssary unless its broken like me
-import L from "leaflet";
+import L, { Icon } from "leaflet";
 import iconUrl from "leaflet/dist/images/marker-icon.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { UserPost } from "../../posts";
 
 L.Marker.prototype.options.icon = L.icon({
@@ -30,38 +31,40 @@ L.Marker.prototype.options.icon = L.icon({
   shadowSize: [41, 41],
 });
 
-const MyComponent = (props: { closeOverlay: () => void }) => {
-  useMapEvents({
-    click() {
-      props.closeOverlay();
-    },
-  });
-  return null;
-};
+// const MyComponent = (props: { closeOverlay: () => void }) => {
+//   useMapEvents({
+//     click() {
+//       props.closeOverlay();
+//     },
+//   });
+//   return null;
+// };
 
-var Overlay = (props: {
-  message?: string;
-  username?: string;
-  image?: string;
-  open: boolean;
-}) => (
-  <div
-    className={classnames(
-      styles.overlay_container,
-      props.open && styles.overlay_open,
-    )}
-  >
-    <h1>{props?.username}</h1>
-    <p>{props?.message}</p>
-    <div>{props.image && <img src={props.image} />}</div>
-  </div>
-);
+// var Overlay = (props: {
+//   message?: string;
+//   username?: string;
+//   image?: string;
+//   open: boolean;
+// }) => (
+//   <div
+//     className={classnames(
+//       styles.overlay_container,
+//       props.open && styles.overlay_open,
+//     )}
+//   >
+//     <h1>{props?.username}</h1>
+//     <p>{props?.message}</p>
+//     <div>{props.image && <img src={props.image} />}</div>
+//   </div>
+// );
 
 type OverlayInfo = {
   open: boolean;
   message?: string;
   username?: string;
 };
+
+const img_root = process.env.PUBLIC_URL + "/user/img/";
 
 export const Map = (props: {
   posts: UserPost[];
@@ -80,9 +83,20 @@ export const Map = (props: {
   let markers = props.posts
     .filter((post) => post.location != null)
     .map((post: UserPost, i) => {
+      const icon = new Icon({
+        iconUrl: post.has_profile_photo
+          ? img_root + post.id.toString().padStart(3, "0") + ".pfp.jpg"
+          : defaultPfp,
+        iconSize: [35, 35],
+        // iconAnchor: [0, 28],
+        iconAnchor: [17, 17],
+        className: styles.map_icon,
+      });
       return (
         <Marker
           key={i}
+          icon={icon}
+          zIndexOffset={i}
           position={[post.location!.lat, post.location!.long]}
           eventHandlers={{
             click: () => {
@@ -96,7 +110,7 @@ export const Map = (props: {
           }}
         >
           <Tooltip
-            offset={[15, -40]}
+            offset={[0, -22]}
             direction="center"
             permanent
             className={styles.numberIcon}
@@ -131,7 +145,9 @@ export const Map = (props: {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
+      <MarkerClusterGroup maxClusterRadius={40}>
       {markers}
+      </MarkerClusterGroup>
     </MapContainer>
   );
 };
