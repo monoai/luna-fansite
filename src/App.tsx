@@ -30,7 +30,7 @@ export default function App() {
         <WorldMap
           posts={posts}
           cardRefs={cardRefs}
-          innerRef={(m, o) => {
+          innerRef={(m) => {
             map.current = m;
             // TODO: This should probably come from a provider
             // openOverlay.current = o;
