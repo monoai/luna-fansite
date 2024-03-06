@@ -10,6 +10,16 @@
 body {
   background-color: var(--body-color);
   margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+}
+
+@media (max-width: 680px), (max-height: 450px) {
+  body {
+    position: inherit;
+  }
 }
 
 #root {

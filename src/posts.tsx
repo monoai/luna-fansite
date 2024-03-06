@@ -29,7 +29,7 @@ export interface UserPost {
 }
 
 export async function fetchPosts(callback: (posts: UserPost[]) => void) {
-  let response = await fetch(process.env.PUBLIC_URL + "/posts.json");
+  let response = await fetch(process.env.PUBLIC_URL + "/user/posts.json");
   let items = (await response.json()) as UserPostData[];
 
   let posts = items.map((row) => {

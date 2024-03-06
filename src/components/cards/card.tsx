@@ -22,18 +22,7 @@ export const Card = React.forwardRef(
           <div style={{ display: "inline-block" }}>
             {props.post.location!.name}
           </div>
-          <button
-            onClick={props.onClick}
-            style={{
-              display: "inline-block",
-              marginLeft: "0.5rem",
-              padding: "0.5rem",
-              fontSize: "11px",
-              backgroundColor: "#cbf0f",
-              boxShadow: "none",
-              border: "1px solid #cbf0ff",
-            }}
-          >
+          <button onClick={props.onClick} className={styles.map_button}>
             Map
           </button>
         </div>
@@ -64,18 +53,16 @@ export const Card = React.forwardRef(
       detailsSection = <div style={{ textAlign: "right" }}>{xButton}</div>;
     }
 
+    let img_root = process.env.PUBLIC_URL + "/user/img/";
+
     let pfp_src = props.post.has_profile_photo
-      ? process.env.PUBLIC_URL +
-        "/img_assets/" +
-        props.post.id.toString().padStart(3, "0") +
-        ".pfp.jpg"
+      ? img_root + props.post.id.toString().padStart(3, "0") + ".pfp.jpg"
       : defaultPfp;
 
     let images = [];
     for (let i = 0; i < props.post.num_attachments; i++) {
       let img_path =
-        process.env.PUBLIC_URL +
-        "/img_assets/" +
+        img_root +
         props.post.id.toString().padStart(3, "0") +
         "." +
         (i + 1) +

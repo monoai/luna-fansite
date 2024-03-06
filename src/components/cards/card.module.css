@@ -1,47 +1,53 @@
 .card {
   margin-bottom: 2em;
-  padding: 2.5em 2.5em 1.5em 1.5em;
-  background: #ffebc2;
+  padding: 2.5em 2.5em 1.5em 1em;
+  background: #ffeff6;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+
   background-image: linear-gradient(
       90deg,
-      #ffebc2 12px,
+      #ffeff6 12px,
       0,
       rgba(0, 0, 0, 0.1) 15px,
       0,
       var(--body-color) 20px,
       0,
-      #ffebc2 100%
+      #ffeff6 100%
     ),
     radial-gradient(
       circle closest-side,
       rgba(255, 255, 255, 0) 88%,
-      #ffebc2 100%
+      #ffeff6 100%
     ),
     radial-gradient(
       circle at 22px 8px,
       var(--body-color) 40%,
       rgba(0, 0, 0, 0.1) 40%,
       rgba(0, 0, 0, 0.1) 100%
-    );
+    ),
+    url("./img/bg.png");
   background-size:
     32px 8px,
     32px 16px,
-    32px 16px;
-  background-repeat: space no-repeat;
+    32px 16px,
+    450px 500px;
+
+  background-repeat:
+    space no-repeat,
+    space no-repeat,
+    space no-repeat,
+    repeat-y;
+
   background-position:
     center top,
     center 6px,
     center 6px;
+
   font-size: 12px;
 
   display: flex;
   align-items: flex-start;
   gap: 15px;
-}
-
-.message {
-  /* width: 100%; */
 }
 
 .pfp {
@@ -101,4 +107,17 @@
   margin-right: 5px;
   border: 2px dashed pink;
   border-radius: 5px;
+}
+
+.map_button {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 6px 8px;
+  font-size: 10px;
+  background-color: #ed9dcd;
+  box-shadow: none;
+  border: none;
+  border-radius: 8px;
+  color: black;
 }
