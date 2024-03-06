@@ -15,13 +15,13 @@
 
   overflow: hidden;
 
-  /* position: relative; */
-
   flex-grow: 1;
 }
-/* 
-@media (max-width: 680px) {
+
+@media (max-width: 680px), (max-height: 450px) {
   .main {
     display: block;
+    overflow: visible;
+    padding: 10px 15px 0px 15px;
   }
-} */
+}

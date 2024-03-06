@@ -6,11 +6,10 @@
   border-radius: 10px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 680px), (max-height: 450px) {
   .map {
+    min-height: 350px;
     max-height: 30vh;
-    min-width: 95vw;
-    width: 95vw;
     margin-bottom: 20px;
   }
 }

@@ -44,14 +44,13 @@
 
 .title {
   color: white;
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .chLogo {
-  height: 100px;
+  height: 70px;
 }
 
 .subtitle {
