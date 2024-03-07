@@ -1,6 +1,6 @@
 // represents one row in the JSON input
 type UserPostData = [
-  number, // 0: id
+  string, // 0: id
   string, // 1: message
   string, // 2: discord_or_nickname
   string | null, // 3: x_id
@@ -19,7 +19,7 @@ export interface UserLocation {
 
 // used in the application
 export interface UserPost {
-  id: number;
+  id: string;
   message: string;
   discord_or_nickname: string | null;
   x_id: string | null;
