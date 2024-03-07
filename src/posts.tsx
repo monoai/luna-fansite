@@ -28,6 +28,19 @@ export interface UserPost {
   num_attachments: number;
 }
 
+//
+const infoMap = {
+  id: 0,
+  message: 1,
+  nickname: 2,
+  x_id: 3,
+  location: 4,
+  latitude: 5,
+  longitude: 6,
+  has_profile: 7,
+  attachments: 8,
+};
+
 export async function fetchPosts(callback: (posts: UserPost[]) => void) {
   let response = await fetch(process.env.PUBLIC_URL + "/user/posts.json");
   let items = (await response.json()) as UserPostData[];
@@ -44,8 +57,8 @@ export async function fetchPosts(callback: (posts: UserPost[]) => void) {
       discord_or_nickname: row[2],
       x_id: row[3],
       location: location,
-      has_profile_photo: row[7],
-      num_attachments: row[8],
+      has_profile_photo: row[7] === true,
+      num_attachments: parseInt(`${row[8] || 0}`, 10),
     };
   });
 

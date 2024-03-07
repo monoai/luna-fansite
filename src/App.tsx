@@ -54,7 +54,7 @@ export default function App() {
 
                   if (post.location) {
                     let location = post.location!;
-                    map.current?.flyTo([location.lat, location.long], 5);
+                    map.current?.flyTo([location.lat, location.long], 7);
                   }
                 }}
               />
