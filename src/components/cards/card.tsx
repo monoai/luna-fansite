@@ -26,6 +26,7 @@ function attachmentsSection(post: UserPost) {
   for (let ix = 0; ix < post.num_attachments; ix++) {
     let attachment_thumb = (
       <ModalImage
+        loading="lazy"
         className={styles.attachment}
         small={getAttachmentThumbnail(post, ix)}
         large={getAttachment(post, ix)}
