@@ -2,7 +2,12 @@
 import { UserPost } from "../../posts";
 import styles from "./card.module.css";
 import React, { useRef, useEffect } from "react";
-import defaultPfp from "./img/default_pfp.png";
+import ModalImage from "react-modal-image";
+import {
+  getAttachment,
+  getAttachmentThumbnail,
+  getPfp,
+} from "../../postAssets";
 
 type CardProps = {
   // innerRef?: (
@@ -11,6 +16,28 @@ type CardProps = {
   post: UserPost;
   onClick: () => void;
 };
+
+function attachmentsSection(post: UserPost) {
+  if (post.num_attachments == 0) {
+    return null;
+  }
+
+  let images = [];
+  for (let ix = 0; ix < post.num_attachments; ix++) {
+    let attachment_thumb = (
+      <ModalImage
+        className={styles.attachment}
+        small={getAttachmentThumbnail(post, ix)}
+        large={getAttachment(post, ix)}
+        hideDownload={true}
+        alt={post.discord_or_nickname!}
+      />
+    );
+    images.push(attachment_thumb);
+  }
+
+  return <div className={styles.attachments}>{images}</div>;
+}
 
 export const Card = React.forwardRef(
   (props: CardProps, ref: React.ForwardedRef<HTMLDivElement>) => {
@@ -55,27 +82,9 @@ export const Card = React.forwardRef(
 
     let img_root = process.env.PUBLIC_URL + "/user/img/";
 
-    let pfp_src = props.post.has_profile_photo
-      ? img_root + props.post.id.toString().padStart(3, "0") + ".pfp.jpg"
-      : defaultPfp;
-
-    let images = [];
-    for (let i = 0; i < props.post.num_attachments; i++) {
-      let img_path =
-        img_root +
-        props.post.id.toString().padStart(3, "0") +
-        "." +
-        (i + 1) +
-        ".jpg";
-      let attachment_thumb = (
-        <img key={i} className={styles.attachment} src={img_path} />
-      );
-      images.push(attachment_thumb);
-    }
-
     return (
       <div ref={ref} className={styles.card}>
-        <img className={styles.pfp} src={pfp_src} />
+        <img className={styles.pfp} src={getPfp(props.post)} />
 
         <div className={styles.container}>
           <div className={styles.nickname}>
@@ -86,7 +95,7 @@ export const Card = React.forwardRef(
 
           <p className={styles.message}>{props.post.message}</p>
 
-          {images}
+          {attachmentsSection(props.post)}
         </div>
       </div>
     );

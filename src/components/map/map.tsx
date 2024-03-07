@@ -65,7 +65,7 @@ type OverlayInfo = {
 
 export const Map = (props: {
   posts: UserPost[];
-  cardRefs: Map<number, React.RefObject<HTMLDivElement>>;
+  cardRefs: Map<string, React.RefObject<HTMLDivElement>>;
   innerRef?: (
     map: L.Map,
     openOverlay: (info: Omit<OverlayInfo, "open">) => void,

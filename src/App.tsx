@@ -13,7 +13,7 @@ export default function App() {
   const map: React.MutableRefObject<L.Map | undefined> = useRef(undefined);
   const container: React.MutableRefObject<HTMLElement | null> = useRef(null);
 
-  let cardRefs = new Map<number, React.RefObject<HTMLDivElement>>();
+  let cardRefs = new Map<string, React.RefObject<HTMLDivElement>>();
 
   const [posts, setPosts] = useState<UserPost[]>([]);
 

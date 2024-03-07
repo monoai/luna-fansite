@@ -101,6 +101,11 @@
   text-decoration: none;
 }
 
+.attachments {
+  display: flex;
+  flex-direction: row;
+}
+
 .attachment {
   width: 100px;
   padding: 4px;
