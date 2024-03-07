@@ -19,7 +19,6 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
     "react-leaflet": "^4.2.1",
-    "react-leaflet-cluster": "^2.1.0",
     "react-modal-image": "^2.6.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
