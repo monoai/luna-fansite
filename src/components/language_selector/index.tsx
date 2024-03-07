@@ -14,7 +14,7 @@ export const LanguageLoader = createContext<LanguageLoaderContext>({
 
 // This is required because github pages serves the origin here, but locally the origin
 // is treated as localhost:3000. This should allow us to load json in both places
-const JSON_PATH = window.location.origin + "/luna-fansite";
+const JSON_PATH = process.env.PUBLIC_URL;
 
 export const LanguageLoaderProvider = (props: React.PropsWithChildren<{}>) => {
   const [languageLoaded, setLanguageLoaded] = useState<Record<string, boolean>>(
