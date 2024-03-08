@@ -81,15 +81,13 @@ export const Card = React.forwardRef(
       detailsSection = <div style={{ textAlign: "right" }}>{xButton}</div>;
     }
 
-    let img_root = process.env.PUBLIC_URL + "/user/img/";
-
     return (
       <div ref={ref} className={styles.card}>
         <img className={styles.pfp} src={getPfp(props.post)} />
 
         <div className={styles.container}>
           <div className={styles.nickname}>
-            {props.post.id} {props.post.discord_or_nickname}
+            {props.post.discord_or_nickname}
           </div>
 
           {detailsSection}
