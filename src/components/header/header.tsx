@@ -10,15 +10,15 @@ const LanguageSelectorNavItem = () => {
   const { t, i18n } = useTranslation();
   return (
     <NavItem>
-      {t("Lang: ")}
       <select
         onChange={(evt) => {
           changeLanguage(evt.target.value);
         }}
+        className={styles.languageSelector}
         value={i18n.language}
       >
-        <option value={"en"}>{t("en")}</option>
-        <option value={"ja"}>{t("ja")}</option>
+        <option value={"en"}>🇬🇧</option>
+        <option value={"ja"}>🇯🇵</option>
       </select>
     </NavItem>
   );
@@ -31,13 +31,9 @@ export const Header = () => {
       <div className={styles.title}>
         <img src={hime} className={styles.chLogo} />
       </div>
-      <nav className={styles.siteNav}>
-        <NavItem>Home</NavItem>
-        <NavItem>Projects</NavItem>
-        <NavItem>{t("About")}</NavItem>
+      <div className={styles.languageNav}>
         <LanguageSelectorNavItem />
-        {/* Home <span className="menudot">•</span> Projects <span className="menudot">•</span> About <span className="menudot">•</span> Lang: EN */}
-      </nav>
+      </div>
       <div className={styles.topDivider}>
         <div className={styles.moonAndStarDivider}></div>
         <div className={styles.waveDivider}></div>
