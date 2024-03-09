@@ -1,6 +1,6 @@
 .card {
   margin-bottom: 2em;
-  padding: 2.5em 2.5em 1.5em 1em;
+  padding: 2.5em 2.2em 1.5em 0.9em;
   background: #ffeff6;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 
@@ -106,12 +106,12 @@
 .attachments {
   display: flex;
   flex-direction: row;
+  gap: 7px;
 }
 
 .attachment {
-  width: 100px;
+  width: 150px;
   padding: 4px;
-  margin-right: 5px;
   border: 2px dashed pink;
   border-radius: 5px;
 }

@@ -19,6 +19,7 @@ body {
 @media (max-width: 680px), (max-height: 450px) {
   body {
     position: inherit;
+    overflow: none;
   }
 }
 
@@ -31,6 +32,14 @@ body {
   max-height: 100vh;
   height: 100vh;
   line-height: 1.5;
+}
+
+@media (max-width: 680px), (max-height: 450px) {
+  body {
+    #root {
+      height: 100%;
+    }
+  }
 }
 
 *,

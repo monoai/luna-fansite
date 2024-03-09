@@ -1,19 +1,31 @@
 .castle {
-  width: 70px;
+  width: 40px;
   position: relative;
-  bottom: 10px;
+  bottom: 5px;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 .pageFooter {
   flex-shrink: 0;
-  height: 150px;
+  height: 80px;
   width: 100%;
+  margin-top: 10px;
 
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 
   background: url(./img/meadow.png) repeat-x center;
   align-items: center;
 
   display: flex;
   flex-direction: column-reverse;
+
+  font-size: 12px;
 }

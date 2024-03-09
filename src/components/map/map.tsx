@@ -21,8 +21,6 @@ L.Marker.prototype.options.icon = L.icon({
   shadowSize: [41, 41],
 });
 
-const img_root = process.env.PUBLIC_URL + "/user/img/";
-
 export const Map = (props: {
   posts: UserPost[];
   cardRefs: Map<string, React.RefObject<HTMLDivElement>>;
