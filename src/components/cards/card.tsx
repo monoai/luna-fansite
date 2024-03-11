@@ -8,6 +8,7 @@ import {
   getAttachmentThumbnail,
   getPfp,
 } from "../../postAssets";
+import { useTranslation } from "react-i18next";
 
 type CardProps = {
   // innerRef?: (
@@ -42,13 +43,14 @@ function attachmentsSection(post: UserPost) {
 
 export const Card = React.forwardRef(
   (props: CardProps, ref: React.ForwardedRef<HTMLDivElement>) => {
+    const { t } = useTranslation();
     let locationLabel = null;
 
     if (props.post.location) {
       locationLabel = (
         <div>
           <div style={{ display: "inline-block" }}>
-            {props.post.location!.name}
+            {t(props.post.location!.name)}
           </div>
           <button onClick={props.onClick} className={styles.map_button}>
             Map
