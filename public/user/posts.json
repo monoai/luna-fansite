@@ -67,7 +67,7 @@
   ],
   [
     "u07",
-    "Himemori Luna brings me happiness. Her vods are something I have to look forward to at the end of a day. She inspires me to always be bettering myself, and to push through difficult times. Being part of the Luknights has given me a sense of camaraderie that I've gone without for too long.",
+    "Himemori Luna brings me happiness. Her vods are something I can look forward to at the end of a day. She inspires me to always better myself and to push through difficult times. Being part of the Luknights has brought me a camaraderie that I've gone without for too long. ",
     "PunishedCrab",
     null,
     "California, USA",
@@ -417,7 +417,17 @@
     false,
     2
   ],
-  ["u39", "She is my baby", "Dodoliy", "Dodoliy", "Indonesia", 5, 120, true, 2],
+  [
+    "u39",
+    "She is my baby",
+    "Dodoliy",
+    "Dodoliy",
+    "Indonesia",
+    5,
+    120,
+    true,
+    2
+  ],
   [
     "u40",
     "ルーナたんは私の最推し、ルーナたんは私の全部！\n毎日ルーナたんの配信見えるでめっちゃ幸せ、ルーナたんの可愛い声と可愛い笑顔見たら心が癒した！\n世界一可愛いお姫様！\n100万人おめでとう！！！\n一生応援します！！！",
@@ -425,7 +435,7 @@
     "bb28132009",
     "Hong Kong",
     22.3,
-    114.5,
+    114.2,
     false,
     1
   ],
@@ -538,5 +548,105 @@
     121.5,
     true,
     0
+  ],
+  [
+    "u51",
+    "I first started watching Princess Luna in 2021 when she did several Cute Sexy Genius Nanolish streams. I stayed around for regular electone streams that happened in the morning in my timezone, and they were a great way to start the day!",
+    "SpiritVet",
+    null,
+    "Alabama, USA",
+    33,
+    -87,
+    false,
+    0
+  ],
+  [
+    "u52",
+    "私にとって、ルーナは世界でただ一人のお姫様です。\n彼女の存在が私を癒してくれた、彼女なしでは生きていけなかった。\nだから彼女がホロライブにいてくれて本当に感謝しています。",
+    "YUZU",
+    "pomelo10278",
+    "Hong Kong",
+    22.3,
+    114.2,
+    false,
+    0
+  ],
+  [
+    "u53",
+    "忠誠を誓う主",
+    "一般ルーナイト灰モモ",
+    "kaimomodaigo",
+    "Tokyo, Japan",
+    35.689722,
+    139.692222,
+    true,
+    2
+  ],
+  [
+    "u54",
+    "とても大切な人",
+    "猫の男爵",
+    "GT380_CB400T",
+    "Japan",
+    35.9,
+    137.9,
+    true,
+    0
+  ],
+  [
+    "u55",
+    "自分の癒やし　healer",
+    "るるろん",
+    "rururon2588",
+    "Aichi, Japan",
+    35.178611,
+    136.913889,
+    true,
+    0
+  ],
+  [
+    "u56",
+    "かわいすぎる不思議な生き物\n赤ちゃんかと思えばエレクトーンを引けるという特技を持っていたり、手先が器用でハンドメイドが得意だったりいつも驚かされてばかりです",
+    "シノイ",
+    "nyantorasarad",
+    "Tochigi, Japan",
+    36.516667,
+    139.816667,
+    true,
+    0
+  ],
+  [
+    "u57",
+    "Lunatan is the fuel to my heart, the color of my life. You inspire me to do my best in everything I do. Congratulations on 1 million subscribers our cutest Hime! I’m excited for the fun surprises the future holds. んなたんI love youちゅぱちゅぱ(・o・🍬)",
+    "splyff",
+    "lytmyspliff",
+    "Bacolod City, Philippines",
+    10.676458,
+    122.950917,
+    true,
+    2
+  ],
+  [
+    "u58",
+    "Goddess",
+    "MegGal",
+    "Meggal_SA",
+    "Thailand",
+    15,
+    101,
+    true,
+    0
+  ],
+  [
+    "u59",
+    "Luna-tan is a cute bebi I'll love forever nanora.",
+    "Yunii",
+    "Yuniikorn",
+    "Manitoba, Canada",
+    55,
+    -97,
+    false,
+    "https://drive.google.com/u/1/open?usp=forms_web&id=1UQ7ecf2iKAzM2l5vP3TembzohK-_Kyjz
+    https://drive.google.com/u/1/open?usp=forms_web&id=1LoBZ45R8khjE66bRiIqQ5bYVI6yV6Y4O"
   ]
 ]
