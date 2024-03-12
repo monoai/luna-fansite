@@ -417,17 +417,7 @@
     false,
     2
   ],
-  [
-    "u39",
-    "She is my baby",
-    "Dodoliy",
-    "Dodoliy",
-    "Indonesia",
-    5,
-    120,
-    true,
-    2
-  ],
+  ["u39", "She is my baby", "Dodoliy", "Dodoliy", "Indonesia", 5, 120, true, 2],
   [
     "u40",
     "ルーナたんは私の最推し、ルーナたんは私の全部！\n毎日ルーナたんの配信見えるでめっちゃ幸せ、ルーナたんの可愛い声と可愛い笑顔見たら心が癒した！\n世界一可愛いお姫様！\n100万人おめでとう！！！\n一生応援します！！！",
@@ -626,17 +616,7 @@
     true,
     2
   ],
-  [
-    "u58",
-    "Goddess",
-    "MegGal",
-    "Meggal_SA",
-    "Thailand",
-    15,
-    101,
-    true,
-    0
-  ],
+  ["u58", "Goddess", "MegGal", "Meggal_SA", "Thailand", 15, 101, true, 0],
   [
     "u59",
     "Luna-tan is a cute bebi I'll love forever nanora.",
@@ -646,7 +626,6 @@
     55,
     -97,
     false,
-    "https://drive.google.com/u/1/open?usp=forms_web&id=1UQ7ecf2iKAzM2l5vP3TembzohK-_Kyjz
-    https://drive.google.com/u/1/open?usp=forms_web&id=1LoBZ45R8khjE66bRiIqQ5bYVI6yV6Y4O"
+    2
   ]
 ]
