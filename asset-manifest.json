@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e03435c.css",
+    "main.css": "/static/css/main.bf13e701.css",
     "main.js": "/static/js/main.97f68cfb.js",
     "static/js/787.84506305.chunk.js": "/static/js/787.84506305.chunk.js",
     "static/media/clouds_large.png": "/static/media/clouds_large.70a34263b74cd873f64f.png",
     "static/media/x-logo-black.png": "/static/media/x-logo-black.c9d69acfaf852c0ddb71.png",
-    "static/media/congrats_mobile.png": "/static/media/congrats_mobile.aed52c63d55066c9484b.png",
-    "static/media/congrats.png": "/static/media/congrats.e6d481ab2ca4b0761e5d.png",
+    "static/media/congrats_mobile.png": "/static/media/congrats_mobile.aab310d4defe4ed6ecd4.png",
+    "static/media/congrats.png": "/static/media/congrats.3a382c9b8b8e083b4c8d.png",
     "static/media/meadow.png": "/static/media/meadow.0cc39ad8b9365a534051.png",
     "static/media/castle.png": "/static/media/castle.23f0a221313cf0e78a4f.png",
     "static/media/bg.png": "/static/media/bg.ee10392afa27275fa2e2.png",
-    "static/media/candy_pattern.png": "/static/media/candy_pattern.c63658328d3ddb6cdbf8.png",
+    "static/media/header_bg.png": "/static/media/header_bg.663deb3809fe9fd60214.png",
     "index.html": "/index.html",
-    "main.7e03435c.css.map": "/static/css/main.7e03435c.css.map",
+    "main.bf13e701.css.map": "/static/css/main.bf13e701.css.map",
     "main.97f68cfb.js.map": "/static/js/main.97f68cfb.js.map",
     "787.84506305.chunk.js.map": "/static/js/787.84506305.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e03435c.css",
+    "static/css/main.bf13e701.css",
     "static/js/main.97f68cfb.js"
   ]
 }
