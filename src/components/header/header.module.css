@@ -2,8 +2,10 @@
   width: 100%;
   height: 110px;
 
+  background-color: white;
+
   background-image: url("./img/congrats.png"), url("./img/wave.png"),
-    url("./img/candy_pattern.png");
+    url("./img/header_bg.png");
 
   background-repeat: no-repeat, repeat-x, repeat-x;
 
@@ -12,7 +14,7 @@
   background-size:
     525px 90px,
     auto,
-    auto;
+    330px 100px;
 
   flex-shrink: 0;
 }
@@ -24,16 +26,19 @@
     min-width: 110px;
 
     background-image: url("./img/congrats_mobile.png"), url("./img/wave.png"),
-      url("./img/candy_pattern.png");
+      url("./img/header_bg.png");
 
     background-repeat: no-repeat, repeat-x, repeat-x;
 
-    background-position: center, bottom, center;
+    background-position:
+      center,
+      bottom,
+      center 10px;
 
     background-size:
       420px 150px,
       auto,
-      auto;
+      330px 100px;
 
     flex-shrink: 0;
   }
