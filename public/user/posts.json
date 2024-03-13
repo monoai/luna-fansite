@@ -628,5 +628,49 @@
     false,
     2
   ],
-  ["u60", "I love Luna! CIJ! CIJ! CIJ!", "Tam", null, "France", 47, 2, true, 0]
+  ["u60", "I love Luna! CIJ! CIJ! CIJ!", "Tam", null, "France", 47, 2, true, 0],
+  [
+    "u61",
+    "癒し",
+    "不審者",
+    "ふっしー",
+    "Tokyo, Japan",
+    35.689722,
+    139.692222,
+    true,
+    0
+  ],
+  [
+    "u62",
+    "100万人おめでとう～🎉🎉🎉",
+    "Anonymous",
+    null,
+    "Chennai, India",
+    13.0825,
+    80.275,
+    false,
+    0
+  ],
+  [
+    "u63",
+    "Whenever I see Luna, I always feel very happy.\nI will always support Luna !!!\nCIJ ! CIJ ! CIJ !",
+    "ShaoTX",
+    "ShaoTX_0414",
+    "Taichung",
+    24.143889,
+    120.679444,
+    true,
+    2
+  ],
+  [
+    "u64",
+    "Luna-tan es mi oshi, una inspiración para salir adelante en los momentos difíciles y una valiosa parte de mi vida en cada momento ",
+    "marionijyusan",
+    "MarioNijyusan",
+    "Buenos Aires, Argentina",
+    -34.603333,
+    -58.381667,
+    true,
+    2
+  ]
 ]
