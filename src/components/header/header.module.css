@@ -1,4 +1,4 @@
-.pageHeader {
+.header {
   width: 100%;
   height: 110px;
 
@@ -14,32 +14,89 @@
   background-size:
     525px 90px,
     auto,
-    330px 100px;
+    430px 120px;
 
   flex-shrink: 0;
 }
 
-@media (max-width: 680px), (max-height: 450px) {
-  .pageHeader {
-    width: 100%;
-    height: 160px;
-    min-width: 110px;
+.collapsibleHeader {
+  position: sticky;
+  top: -160px;
+  z-index: 1;
 
-    background-image: url("./img/congrats_mobile.png"), url("./img/wave.png"),
-      url("./img/header_bg.png");
+  padding: 10px 0px 18px 0px;
 
-    background-repeat: no-repeat, repeat-x, repeat-x;
+  background-image: linear-gradient(
+      to top,
+      transparent 0px,
+      transparent 8px,
+      rgb(255, 255, 255) 8px,
+      rgb(255, 255, 255) 100px
+    ),
+    url("./img/map_wave.png");
 
-    background-position:
-      center,
-      bottom,
-      center 10px;
+  background-repeat: no-repeat, repeat-x;
 
-    background-size:
-      420px 150px,
-      auto,
-      330px 100px;
+  background-position: center, bottom;
 
-    flex-shrink: 0;
-  }
+  background-size:
+    auto,
+    28px 8px;
+}
+
+.collapsibleHeader > .logo {
+  width: 100%;
+  height: 200px;
+  min-width: 110px;
+
+  background-image: url("../header/img/congrats_mobile.png"),
+    url("../header/img/header_bg.png");
+
+  background-repeat: no-repeat, no-repeat;
+
+  background-position:
+    center 10px,
+    center top;
+
+  background-size:
+    360px 150px,
+    contain;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.collapsibleHeader > .logo > .lunaLogo {
+  width: 125px;
+  height: 35px;
+
+  background-image: url("./img/luna_logo.png");
+  background-size: 125px 35px;
+  background-repeat: no-repeat;
+
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.collapsibleHeader > .logo > .collapsedLogo {
+  width: 100%;
+  height: 50px;
+  /* background-color: white; */
+
+  background-image: url("./img/collapsed_header_left.png"),
+    url("./img/luna_logo.png");
+  background-size:
+    100px 50px,
+    125px 35px;
+  background-position:
+    bottom left 8px,
+    bottom 5px right 8px;
+  background-repeat: no-repeat, no-repeat;
+
+  transition-property: opacity;
+  transition-duration: 0.5s;
 }

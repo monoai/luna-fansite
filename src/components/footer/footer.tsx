@@ -1,5 +1,4 @@
 import styles from "./footer.module.css";
-import castle from "./img/castle.png";
 
 export const Footer = () => (
   <footer className={styles.pageFooter}>
@@ -8,6 +7,9 @@ export const Footer = () => (
       <a href="https://discord.gg/cuteisjustice">Luna's Candy Kingdom</a>{" "}
       Discord
     </div>
-    <img src={castle} className={styles.castle}></img>
+    <a
+      href="https://www.youtube.com/@HimemoriLuna"
+      className={styles.castle}
+    ></a>
   </footer>
 );

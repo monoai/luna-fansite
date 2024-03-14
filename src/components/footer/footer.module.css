@@ -1,7 +1,11 @@
 .castle {
-  width: 40px;
+  width: 42px;
+  height: 42px;
   position: relative;
   bottom: 5px;
+  display: inline-block;
+  background: url(./img/castle.png) no-repeat center;
+  background-size: 42px 42px;
 }
 
 a,

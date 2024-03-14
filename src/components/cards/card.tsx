@@ -1,7 +1,7 @@
 // import * as React from "react";
 import { UserPost } from "../../posts";
 import styles from "./card.module.css";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import ModalImage from "react-modal-image";
 import {
   getAttachment,
@@ -11,34 +11,33 @@ import {
 import { useTranslation } from "react-i18next";
 
 type CardProps = {
-  // innerRef?: (
-  //   item: HTMLElement,
-  // ) => void;
   post: UserPost;
   onClick: () => void;
 };
 
 function attachmentsSection(post: UserPost) {
-  if (post.num_attachments == 0) {
+  if (post.num_attachments === 0) {
     return null;
   }
 
   let images = [];
   for (let ix = 0; ix < post.num_attachments; ix++) {
     let attachment_thumb = (
-      <ModalImage
-        loading="lazy"
-        className={styles.attachment}
-        small={getAttachmentThumbnail(post, ix)}
-        large={getAttachment(post, ix)}
-        hideDownload={true}
-        alt={post.discord_or_nickname!}
-      />
+      <div key={ix} className={styles.attachment}>
+        <ModalImage
+          loading="lazy"
+          className={styles.attachmentInner}
+          small={getAttachmentThumbnail(post, ix)}
+          large={getAttachment(post, ix)}
+          hideDownload={true}
+          alt={post.nickname}
+        />
+      </div>
     );
     images.push(attachment_thumb);
   }
 
-  return <div className={styles.attachments}>{images}</div>;
+  return images;
 }
 
 export const Card = React.forwardRef(
@@ -88,9 +87,7 @@ export const Card = React.forwardRef(
         <img className={styles.pfp} src={getPfp(props.post)} />
 
         <div className={styles.container}>
-          <div className={styles.nickname}>
-            {props.post.discord_or_nickname}
-          </div>
+          <div className={styles.nickname}>{props.post.nickname}</div>
 
           {detailsSection}
 

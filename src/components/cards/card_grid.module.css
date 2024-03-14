@@ -8,8 +8,7 @@
   flex-grow: 1;
 }
 
-@media (max-width: 680px), (max-height: 450px) {
-  .cardGrid {
-    min-width: 100%;
-  }
+.cardGridPortrait {
+  min-width: 100%;
+  padding: 10px 10px 0px 10px;
 }

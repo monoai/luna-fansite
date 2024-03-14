@@ -21,25 +21,12 @@ export interface UserLocation {
 export interface UserPost {
   id: string;
   message: string;
-  discord_or_nickname: string | null;
+  nickname: string;
   x_id: string | null;
   location: UserLocation | null;
   has_profile_photo: boolean;
   num_attachments: number;
 }
-
-//
-const infoMap = {
-  id: 0,
-  message: 1,
-  nickname: 2,
-  x_id: 3,
-  location: 4,
-  latitude: 5,
-  longitude: 6,
-  has_profile: 7,
-  attachments: 8,
-};
 
 export async function fetchPosts(callback: (posts: UserPost[]) => void) {
   let response = await fetch(process.env.PUBLIC_URL + "/user/posts.json");
@@ -54,7 +41,7 @@ export async function fetchPosts(callback: (posts: UserPost[]) => void) {
     return {
       id: row[0],
       message: row[1],
-      discord_or_nickname: row[2],
+      nickname: row[2],
       x_id: row[3],
       location: location,
       has_profile_photo: row[7] === true,

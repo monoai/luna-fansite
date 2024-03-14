@@ -1,17 +1,15 @@
-import "./App.css";
-import { Header } from "./components/header/header";
+import styles from "./App.module.css";
+import { Header, CollapsibleHeader } from "./components/header/header";
 import { Map as WorldMap } from "./components/map/map";
 import { CardGrid } from "./components/cards/card_grid";
-import { Card } from "./components/cards/card";
 import { Footer } from "./components/footer/footer";
-import { LanguageLoaderProvider } from "./components/language_selector";
 import { fetchPosts, UserPost } from "./posts";
 import L from "leaflet";
-import { createRef, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
+import { isPortrait, LayoutContext } from "./components/providers/layout";
 
 export default function App() {
-  const map: React.MutableRefObject<L.Map | undefined> = useRef(undefined);
-  const container: React.MutableRefObject<HTMLElement | null> = useRef(null);
+  const mapRef: React.MutableRefObject<L.Map | undefined> = useRef(undefined);
 
   let cardRefs = new Map<string, React.RefObject<HTMLDivElement>>();
 
@@ -23,46 +21,38 @@ export default function App() {
     });
   }, []);
 
-  return (
-    <LanguageLoaderProvider>
-      <Header />
-      <main className="main" ref={(c) => (container.current = c)}>
-        <WorldMap
-          posts={posts}
-          cardRefs={cardRefs}
-          innerRef={(m) => {
-            map.current = m;
-            // TODO: This should probably come from a provider
-            // openOverlay.current = o;
-          }}
-        />
-        <CardGrid>
-          {posts.map((post, i) => {
-            const cardRef = createRef<HTMLDivElement>();
+  const orientation = useContext(LayoutContext);
 
-            cardRefs.set(post.id, cardRef);
+  let cards = <CardGrid posts={posts} cardRefs={cardRefs} mapRef={mapRef} />;
 
-            return (
-              <Card
-                ref={cardRef}
-                key={"card" + i}
-                post={post}
-                onClick={() => {
-                  container?.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-
-                  if (post.location) {
-                    let location = post.location!;
-                    map.current?.flyTo([location.lat, location.long], 7);
-                  }
-                }}
-              />
-            );
-          })}
-        </CardGrid>
-      </main>
-      <Footer />
-    </LanguageLoaderProvider>
+  let map = (
+    <WorldMap
+      posts={posts}
+      cardRefs={cardRefs}
+      innerRef={(m) => {
+        mapRef.current = m;
+      }}
+    />
   );
+
+  if (isPortrait(orientation)) {
+    return (
+      <>
+        <CollapsibleHeader>{map}</CollapsibleHeader>
+        {cards}
+        <Footer />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Header />
+        <div className={styles.main}>
+          {map}
+          {cards}
+        </div>
+        <Footer />
+      </>
+    );
+  }
 }

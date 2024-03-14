@@ -1,49 +1,20 @@
 .card {
-  margin-bottom: 2em;
-  padding: 2.5em 2.2em 1.5em 0.9em;
+  margin-right: 2px;
+  margin-bottom: 1.5em;
+  padding: 1em 2.2em 1.2em 0.9em;
   background: #ffeff6;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 
-  background-image: linear-gradient(
-      90deg,
-      #ffeff6 12px,
-      0,
-      rgba(0, 0, 0, 0.1) 15px,
-      0,
-      var(--body-color) 20px,
-      0,
-      #ffeff6 100%
-    ),
-    radial-gradient(
-      circle closest-side,
-      rgba(255, 255, 255, 0) 88%,
-      #ffeff6 100%
-    ),
-    radial-gradient(
-      circle at 22px 8px,
-      var(--body-color) 40%,
-      rgba(0, 0, 0, 0.1) 40%,
-      rgba(0, 0, 0, 0.1) 100%
-    ),
-    url("./img/bg.png");
-  background-size:
-    32px 8px,
-    32px 16px,
-    32px 16px,
-    450px 500px;
+  background-image: url("./img/bg.png");
 
-  background-repeat:
-    space no-repeat,
-    space no-repeat,
-    space no-repeat,
-    repeat-y;
+  background-size: 450px 500px;
 
-  background-position:
-    center top,
-    center 6px,
-    center 6px;
+  background-position: center;
 
   font-size: 12px;
+
+  border: 2px solid hsl(304, 54%, 87%);
+  border-radius: 25px;
 
   display: flex;
   align-items: flex-start;
@@ -103,17 +74,20 @@
   text-decoration: none;
 }
 
-.attachments {
-  display: flex;
-  flex-direction: row;
-  gap: 7px;
+.attachment {
+  display: inline-block;
+  width: 47%;
+  margin-right: 7px;
 }
 
-.attachment {
-  width: 150px;
+.attachment .attachmentInner {
   padding: 4px;
   border: 2px dashed pink;
   border-radius: 5px;
+}
+
+.message {
+  white-space: pre-wrap;
 }
 
 .map_button {
