@@ -10,7 +10,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 //leaflet defaults broke on me somehow.... this is completely unesssary unless its broken like me
 import L, { Icon } from "leaflet";
@@ -122,7 +122,7 @@ export const Map = (props: MapProps) => {
           if (mapRef.current) {
             mapRef.current!.invalidateSize();
           }
-        }, 0);
+        }, 100);
       }}
     >
       <AttributionControl position="bottomright" prefix={false} />
