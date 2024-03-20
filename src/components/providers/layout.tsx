@@ -14,7 +14,7 @@ export function isPortrait(orientation: Orientation | null): boolean {
 
 export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
   function calculate() {
-    return window.innerWidth < 680
+    return window.innerWidth < 720
       ? Orientation.Portrait
       : Orientation.Landscape;
   }

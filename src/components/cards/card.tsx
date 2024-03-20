@@ -49,7 +49,7 @@ export const Card = React.forwardRef(
       locationLabel = (
         <div>
           <div style={{ display: "inline-block" }}>
-            {t(props.post.location!.name)}
+            {t(props.post.location!.name, { ns: "location" })}
           </div>
           <button onClick={props.onClick} className={styles.map_button}>
             Map

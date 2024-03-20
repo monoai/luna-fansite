@@ -4,17 +4,20 @@
 }
 
 .map.header {
-  min-height: 200px;
-  max-height: 30vh;
+  min-height: 160px;
+  max-height: 35vh;
 
-  width: auto;
-  margin: 0px 10px;
+  margin: auto;
+  width: 95%;
 }
 
 .map.standalone {
+  margin-top: 110px;
+  margin-bottom: 90px;
   width: 100%;
   height: 100%;
   flex: 1;
+  margin-left: 10px;
 }
 
 .numberIcon {

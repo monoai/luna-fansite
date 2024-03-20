@@ -48,10 +48,12 @@ export default function App() {
       <>
         <Header />
         <div className={styles.main}>
-          {map}
+          <div className={styles.mainLeft}>
+            {map}
+            <Footer />
+          </div>
           {cards}
         </div>
-        <Footer />
       </>
     );
   }

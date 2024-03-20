@@ -30,8 +30,6 @@ L.Marker.prototype.options.icon = L.icon({
   shadowSize: [41, 41],
 });
 
-const HEADER_HEIGHT = 150;
-
 type MapProps = {
   posts: UserPost[];
   cardRefs: Map<string, React.RefObject<HTMLDivElement>>;
@@ -63,19 +61,15 @@ function createMarkers(
             click: () => {
               const cardDiv = props.cardRefs.get(post.id)!.current!;
 
-              if (isPortrait) {
-                window.scrollTo({
-                  top:
-                    cardDiv.offsetTop -
-                    cardDiv.parentElement!.offsetTop +
-                    HEADER_HEIGHT,
-                  behavior: "smooth",
-                });
-              } else {
-                cardDiv.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }
+              let container = isPortrait ? window : cardDiv.parentElement!;
+
+              container.scrollTo({
+                top:
+                  cardDiv.offsetTop -
+                  cardDiv.parentElement!.offsetTop +
+                  (isPortrait ? 150 : -110),
+                behavior: "smooth",
+              });
             },
           }}
         >
