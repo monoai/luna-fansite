@@ -23,16 +23,16 @@ export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
 
   useEffect(() => {
     let callback: any;
-    if (window.navigator.userAgent.includes('Mobile')) {
+    if (window.navigator.userAgent.includes("Mobile")) {
       callback = () => {
         setOrientation(calculate());
-      }
+      };
     } else {
       callback = debounce(() => {
         setOrientation(calculate());
       }, 15);
     }
-    
+
     window.addEventListener("resize", callback);
 
     return () => window.removeEventListener("resize", callback);
