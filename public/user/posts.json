@@ -417,7 +417,17 @@
     false,
     2
   ],
-  ["u39", "She is my baby", "Dodoliy", "Dodoliy", "Indonesia", 5, 120, true, 2],
+  [
+    "u39",
+    "She is my baby",
+    "Dodoliy",
+    "Dodoliy",
+    "Indonesia",
+    5,
+    120,
+    true,
+    2
+  ],
   [
     "u40",
     "ルーナたんは私の最推し、ルーナたんは私の全部！\n毎日ルーナたんの配信見えるでめっちゃ幸せ、ルーナたんの可愛い声と可愛い笑顔見たら心が癒した！\n世界一可愛いお姫様！\n100万人おめでとう！！！\n一生応援します！！！",
@@ -616,7 +626,17 @@
     true,
     2
   ],
-  ["u58", "Goddess", "MegGal", "Meggal_SA", "Thailand", 15, 101, true, 0],
+  [
+    "u58",
+    "Goddess",
+    "MegGal",
+    "Meggal_SA",
+    "Thailand",
+    15,
+    101,
+    true,
+    0
+  ],
   [
     "u59",
     "Luna-tan is a cute bebi I'll love forever nanora.",
@@ -628,7 +648,17 @@
     false,
     2
   ],
-  ["u60", "I love Luna! CIJ! CIJ! CIJ!", "Tam", null, "France", 47, 2, true, 0],
+  [
+    "u60",
+    "I love Luna! CIJ! CIJ! CIJ!",
+    "Tam",
+    null,
+    "France",
+    47,
+    2,
+    true,
+    0
+  ],
   [
     "u61",
     "癒し",
@@ -721,7 +751,7 @@
     "u69",
     "Pink Luna, Cute Luna, Himemori Luna~! Thank you Luna for 4 years of streaming! I may have only watched you for about 1 and a half years but still Luna is my favorite, pushing me on with a positive voice! Luna has never failed to cheer me up and make me motivated to continue what i do in my high-school routine. Whenever i am stressed or need a break, I am glad that there is Luna's cuteness to refill my energy. Luna, you everything to me so please stay safe, healthy and ongoing. I wish for Luna to continue with activities and reach greater achievements with justice! Forever CIJ!\nピンクの、可愛い、姫森ルナなのら～！4年間活動してくれてありがとうございます！まだ1年半くらいしかおしてないけど、元気な声で押してくれるルナちゃんが大好きです！ルナはいつも励まし、高校での日課を続ける意欲を与えてくれました。ストレスが溜まったときとか，ちょっと休憩したいとき、ルナのかわいさがあるので元気を充電できていつも嬉しいに感謝しています。ルナはすべてですので、安全に、健康に、そして継続してください。ルナはこれからも正義に活動を続け、更なる成果を上げて欲しいと思います！これまでずっとCIJ！",
     "hillo2137",
-    "https://twitter.com/Hillo2137",
+    "Hillo2137",
     "Auckland, New Zealand",
     -36.840556,
     174.74,
@@ -754,10 +784,32 @@
     "u72",
     "100万人おめでとうございます！！私にとってんなたんは私の人生に鮮やかな色をつけてくれる存在です。ありがとうございます…んなたんに出会えて本当に良かった！",
     "白貓",
-    "@shirononeko_",
+    "shirononeko_",
     "Taipei",
     24,
     121,
+    true,
+    2
+  ],
+  [
+    "u73",
+    "The cutest, most beautiful and hardest-working 0-year-old princess. \nCongratulations on 1M subscribers.\nCIJ~~CIJ~~CIJ~~",
+    "豆豆",
+    "Dodoran_Pan",
+    "Taipei",
+    24,
+    121,
+    true,
+    1
+  ],
+  [
+    "u74",
+    "The world. She brings eternal happiness~ \nCongratulations on 1 million subscribers princess!\n世界よ、ルーナたんは永遠の幸せをもたらす\n姫様、チャンネル登録者数100万人達成おめでとうございます！",
+    "Mr. コリー",
+    "MrColllie92",
+    "Ashton-Under-Lyne, England",
+    53.489708,
+    -2.095241,
     true,
     2
   ]
