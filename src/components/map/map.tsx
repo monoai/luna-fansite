@@ -56,8 +56,10 @@ function createMarkers(
         <Marker
           key={i}
           icon={icon}
+          // draggable
           position={[post.location!.lat, post.location!.long]}
           eventHandlers={{
+            // dragend: x => console.log(post.nickname, x.target._latlng),
             click: () => {
               const cardDiv = props.cardRefs.get(post.id)!.current!;
 
@@ -107,7 +109,7 @@ export const Map = (props: MapProps) => {
       zoom={1.5}
       center={[30, 0]}
       zoomSnap={0.5}
-      maxZoom={10}
+      maxZoom={7}
       minZoom={1}
       maxBounds={[
         [-1000, -Infinity],
