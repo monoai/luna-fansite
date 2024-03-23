@@ -56,8 +56,8 @@ a:active {
 
 .pageFooter > .castle {
   position: absolute;
-  top: 35px;
-  left: 14px;
+  top: 38px;
+  left: 13px;
 }
 
 .pageFooterPortrait {
@@ -93,6 +93,6 @@ a:active {
 
 .pageFooterPortrait > .castle {
   position: absolute;
-  top: 17px;
-  left: 14px;
+  top: 18px;
+  left: 13px;
 }
