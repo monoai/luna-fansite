@@ -2,6 +2,7 @@
   "location": {
     "Japan": "日本",
     "Aichi, Japan": "日本愛知県",
+    "Akita, Japan": "日本秋田県",
     "Chiba, Japan": "日本千葉県",
     "Fukuoka, Japan": "日本福岡県",
     "Gunma, Japan": "日本群馬県",
@@ -21,8 +22,10 @@
     "Alabama, USA": "アメリカ・アラバマ州",
     "California, USA": "アメリカ・カリフォルニア州",
     "Illinois, USA": "アメリカ・イリノイ州",
+    "Florida, USA": "アメリカ・フロリダ州",
     "Kansas, USA": "アメリカ・カンザス州",
     "Kentucky, USA": "アメリカ・ケンタッキー州",
+    "Los Angeles, USA": "アメリカ・ロサンゼルス",
     "Louisiana, USA": "アメリカ・ルイジアナ州",
     "Maryland, USA": "アメリカ・メリーランド州",
     "Nebraska, USA": "アメリカ・ネブラスカ州",
@@ -74,7 +77,9 @@
     "Thailand": "タイ",
 
     "Buenos Aires, Argentina": "アルゼンチン・ブエノスアイレス",
+    "Finland": "フィンランド",
     "Athens, Greece": "ギリシャ・アテネ",
+    "Trento, Italy": "イタリア・トレント",
     "Hong Kong": "香港",
     "Hungary": "ハンガリー",
     "Malaysia": "マレーシア",
@@ -82,7 +87,8 @@
     "Lima, Peru": "ペルー・リマ",
     "Singapore": "シンガポール",
     "Slovakia": "スロバキア",
-    "Falkenberg, Sweden": "スウェーデン・ファルケンベリ"
+    "Falkenberg, Sweden": "スウェーデン・ファルケンベリ",
+    "Hanoi, Vietnam": "ベトナム・ハノイ"
   },
   "interface": {
     "footer": {
