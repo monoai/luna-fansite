@@ -1,0 +1,92 @@
+{
+  "location": {
+    "Japan": "Japan",
+    "Aichi, Japan": "Aichi, Japan",
+    "Chiba, Japan": "Chiba, Japan",
+    "Fukuoka, Japan": "Fukuoka, Japan",
+    "Gunma, Japan": "Gunma, Japan",
+    "Hyogo, Japan": "Hyogo, Japan",
+    "Ibaraki, Japan": "Ibaraki, Japan",
+    "Kanagawa, Japan": "Kanagawa, Japan",
+    "Kyoto, Japan": "Kyoto, Japan",
+    "Mie, Japan": "Mie, Japan",
+    "Niigata, Japan": "Niigata, Japan",
+    "Oita, Japan": "Oita, Japan",
+    "Okayama, Japan": "Okayama, Japan",
+    "Saitama, Japan": "Saitama, Japan",
+    "Tochigi, Japan": "Tochigi, Japan",
+    "Tokyo, Japan": "Tokyo, Japan",
+    "Yokohama, Japan": "Yokohama, Japan",
+
+    "Alabama, USA": "Alabama, USA",
+    "California, USA": "California, USA",
+    "Illinois, USA": "Illinois, USA",
+    "Kansas, USA": "Kansas, USA",
+    "Kentucky, USA": "Kentucky, USA",
+    "Louisiana, USA": "Louisiana, USA",
+    "Maryland, USA": "Maryland, USA",
+    "Nebraska, USA": "Nebraska, USA",
+    "New York, USA": "New York, USA",
+    "Texas, USA": "Texas, USA",
+    "Washington, USA": "Washington, USA",
+    "Washington D.C., USA": "Washington D.C., USA",
+
+    "Beidou, Changhua": "Beidou, Changhua",
+    "Miaoli": "Miaoli",
+    "Taichung": "Taichung",
+    "Tainan": "Tainan",
+    "Taipei": "Taipei",
+    "Taoyuan": "Taoyuan",
+
+    "Perth, Australia": "Perth, Australia",
+    "South Australia, Australia": "South Australia, Australia",
+    "Sydney, Australia": "Sydney, Australia",
+
+    "Manitoba, Canada": "Manitoba, Canada",
+    "Ontario, Canada": "Ontario, Canada",
+
+    "Ashton-Under-Lyne, England": "Ashton-Under-Lyne, England",
+    "Hull, United Kingdom": "Hull, United Kingdom",
+
+    "France": "France",
+    "Paris, France": "Paris, France",
+
+    "Chennai, India": "Chennai, India",
+    "Darjeeling, India": "Darjeeling, India",
+
+    "Indonesia": "Indonesia",
+    "Bandung, Indonesia": "Bandung, Indonesia",
+    "Jakarta, Indonesia": "Jakarta, Indonesia",
+
+    "South Korea": "South Korea",
+    "Busan, South Korea": "Busan, South Korea",
+
+    "Chihuahua, Mexico": "Chihuahua, Mexico",
+    "Oaxaca, México": "Oaxaca, México",
+    
+    "The Netherlands": "The Netherlands",
+    "Zwolle, The Netherlands": "Zwolle, The Netherlands",
+
+    "Bacolod City, Philippines": "Bacolod City, Philippines",
+    "Manila, Philippines": "Manila, Philippines",
+
+    "Bangkok, Thailand": "Bangkok, Thailand",
+    "Thailand": "Thailand",
+
+    "Buenos Aires, Argentina": "Buenos Aires, Argentina",
+    "Athens, Greece": "Athens, Greece",
+    "Hong Kong": "Hong Kong",
+    "Hungary": "Hungary",
+    "Malaysia": "Malaysia",
+    "Auckland, New Zealand": "Auckland, New Zealand",
+    "Lima, Peru": "Lima, Peru",
+    "Singapore": "Singapore",
+    "Slovakia": "Slovakia",
+    "Falkenberg, Sweden": "Falkenberg, Sweden"
+  },
+  "interface": {
+    "footer": {
+      "text": "Created with ❤️ by the LuKnights of <1>Luna's Candy Kingdom</1>"
+    }
+  }
+}

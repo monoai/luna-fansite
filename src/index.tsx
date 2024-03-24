@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./translations/i18n";
+import "./i18n";
 import { LayoutProvider } from "./components/providers/layout";
 
 const root = ReactDOM.createRoot(

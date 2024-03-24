@@ -1,0 +1,92 @@
+{
+  "location": {
+    "Japan": "日本",
+    "Aichi, Japan": "日本愛知県",
+    "Chiba, Japan": "日本千葉県",
+    "Fukuoka, Japan": "日本福岡県",
+    "Gunma, Japan": "日本群馬県",
+    "Hyogo, Japan": "日本兵庫県",
+    "Ibaraki, Japan": "日本茨城県",
+    "Kanagawa, Japan": "日本神奈川県",
+    "Kyoto, Japan": "日本京都府",
+    "Mie, Japan": "日本三重県",
+    "Niigata, Japan": "日本新潟県",
+    "Oita, Japan": "日本大分県",
+    "Okayama, Japan": "日本岡山県",
+    "Saitama, Japan": "日本埼玉県",
+    "Tochigi, Japan": "日本栃木県",
+    "Tokyo, Japan": "日本東京都",
+    "Yokohama, Japan": "日本横浜市",
+
+    "Alabama, USA": "アメリカ・アラバマ州",
+    "California, USA": "アメリカ・カリフォルニア州",
+    "Illinois, USA": "アメリカ・イリノイ州",
+    "Kansas, USA": "アメリカ・カンザス州",
+    "Kentucky, USA": "アメリカ・ケンタッキー州",
+    "Louisiana, USA": "アメリカ・ルイジアナ州",
+    "Maryland, USA": "アメリカ・メリーランド州",
+    "Nebraska, USA": "アメリカ・ネブラスカ州",
+    "New York, USA": "アメリカ・ニューヨーク州",
+    "Texas, USA": "アメリカ・テキサス州",
+    "Washington, USA": "アメリカ・ワシントン州",
+    "Washington D.C., USA": "アメリカ・ワシントンD.C.",
+
+    "Beidou, Changhua": "彰化県・北斗鎮",
+    "Miaoli": "苗栗",
+    "Taichung": "台中",
+    "Tainan": "台南",
+    "Taipei": "台北",
+    "Taoyuan": "桃園市",
+
+    "Perth, Australia": "オーストラリア・パース市",
+    "South Australia, Australia": "オーストラリア・南オーストラリア州",
+    "Sydney, Australia": "オーストラリア・シドニー市",
+
+    "Manitoba, Canada": "カナダ・マニトバ州",
+    "Ontario, Canada": "カナダ・オンタリオ州",
+
+    "Ashton-Under-Lyne, England": "イギリス・ライン",
+    "Hull, United Kingdom": "イギリス・ハル",
+
+    "France": "フランス",
+    "Paris, France": "フランス・パリ",
+
+    "Chennai, India": "インド・チェンナイ",
+    "Darjeeling, India": "インド・ダージリン",
+
+    "Indonesia": "インドネシア",
+    "Bandung, Indonesia": "インドネシア・バンドン",
+    "Jakarta, Indonesia": "インドネシア・ジャカルタ",
+
+    "South Korea": "韓国",
+    "Busan, South Korea": "韓国・釜山広域市",
+    
+    "Chihuahua, Mexico": "メキシコ・チワワ州",
+    "Oaxaca, México": "メキシコ・オアハカ州",
+    
+    "The Netherlands": "オランダ",
+    "Zwolle, The Netherlands": "オランダ・ズヴォレ",
+
+    "Bacolod City, Philippines": "フィリピン・バコロド市",
+    "Manila, Philippines": "フィリピン・マニラ",
+
+    "Bangkok, Thailand": "タイ・バンコク",
+    "Thailand": "タイ",
+
+    "Buenos Aires, Argentina": "アルゼンチン・ブエノスアイレス",
+    "Athens, Greece": "ギリシャ・アテネ",
+    "Hong Kong": "香港",
+    "Hungary": "ハンガリー",
+    "Malaysia": "マレーシア",
+    "Auckland, New Zealand": "ニュージーランド・オークランド",
+    "Lima, Peru": "ペルー・リマ",
+    "Singapore": "シンガポール",
+    "Slovakia": "スロバキア",
+    "Falkenberg, Sweden": "スウェーデン・ファルケンベリ"
+  },
+  "interface": {
+    "footer": {
+      "text": "ルーナイト達から、❤️を込めて<br/>by Discord サーバー: <1>Luna's Candy Kingdom</1>"
+    }
+  }
+}
