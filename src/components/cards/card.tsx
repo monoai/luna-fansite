@@ -43,16 +43,13 @@ function attachmentsSection(post: UserPost) {
 export const Card = React.forwardRef(
   (props: CardProps, ref: React.ForwardedRef<HTMLDivElement>) => {
     const { t } = useTranslation();
-    let locationLabel = null;
 
+    let locationLabel = null;
     if (props.post.location) {
       locationLabel = (
         <div>
-          <div style={{ display: "inline-block" }}>
-            {t(props.post.location!.name, { ns: "location" })}
-          </div>
           <button onClick={props.onClick} className={styles.map_button}>
-            Map
+            {t(props.post.location!.name, { ns: "location" })}
           </button>
         </div>
       );
@@ -64,6 +61,8 @@ export const Card = React.forwardRef(
         <a
           className={styles.x_link}
           href={"https://www.twitter.com/" + props.post.x_id}
+          target="_blank"
+          rel="noreferrer"
         >
           {props.post.x_id}
         </a>

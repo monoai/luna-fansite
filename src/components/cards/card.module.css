@@ -91,14 +91,25 @@
 }
 
 .map_button {
-  display: inline-block;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  padding: 6px 8px;
-  font-size: 10px;
-  background-color: #ed9dcd;
-  box-shadow: none;
+  background-color: transparent;
   border: none;
-  border-radius: 8px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0px 0px 0px 17px;
+
+  background: url(./img/find_map_button.png) 0px / 20px 24px no-repeat;
+  height: 24px;
+  display: inline-block;
+
+  font-size: 11px;
+  text-decoration: none;
+
   color: black;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
