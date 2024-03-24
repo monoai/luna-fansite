@@ -2,6 +2,7 @@
   "location": {
     "Japan": "Japan",
     "Aichi, Japan": "Aichi, Japan",
+    "Akita, Japan": "Akita, Japan",
     "Chiba, Japan": "Chiba, Japan",
     "Fukuoka, Japan": "Fukuoka, Japan",
     "Gunma, Japan": "Gunma, Japan",
@@ -20,9 +21,11 @@
 
     "Alabama, USA": "Alabama, USA",
     "California, USA": "California, USA",
+    "Florida, USA": "Florida, USA",
     "Illinois, USA": "Illinois, USA",
     "Kansas, USA": "Kansas, USA",
     "Kentucky, USA": "Kentucky, USA",
+    "Los Angeles, USA": "Los Angeles, USA",
     "Louisiana, USA": "Louisiana, USA",
     "Maryland, USA": "Maryland, USA",
     "Nebraska, USA": "Nebraska, USA",
@@ -74,15 +77,18 @@
     "Thailand": "Thailand",
 
     "Buenos Aires, Argentina": "Buenos Aires, Argentina",
+    "Finland": "Finland",
     "Athens, Greece": "Athens, Greece",
     "Hong Kong": "Hong Kong",
     "Hungary": "Hungary",
+    "Trento, Italy": "Trento, Italy",
     "Malaysia": "Malaysia",
     "Auckland, New Zealand": "Auckland, New Zealand",
     "Lima, Peru": "Lima, Peru",
     "Singapore": "Singapore",
     "Slovakia": "Slovakia",
-    "Falkenberg, Sweden": "Falkenberg, Sweden"
+    "Falkenberg, Sweden": "Falkenberg, Sweden",
+    "Hanoi, Vietnam": "Hanoi, Vietnam"
   },
   "interface": {
     "footer": {
