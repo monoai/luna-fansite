@@ -57,7 +57,7 @@ function createMarkers(
           // draggable
           position={[post.location!.lat, post.location!.long]}
           eventHandlers={{
-            // dragend: x => console.log(post.nickname, x.target._latlng),
+            // dragend: (x) => console.log(post.id, x.target._latlng),
             click: () => {
               const cardDiv = props.cardRefs.get(post.id)!.current!;
 
