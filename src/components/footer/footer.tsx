@@ -1,7 +1,7 @@
 import styles from "./footer.module.css";
 
 import { useContext } from "react";
-import { useTranslation, Trans } from "react-i18next";
+import { Trans } from "react-i18next";
 import { isPortrait, LayoutContext } from "../providers/layout";
 
 export const Footer = () => {
@@ -9,7 +9,6 @@ export const Footer = () => {
     <a href="https://discord.gg/cuteisjustice">Luna's Candy Kingdom</a>
   );
   const orientation = useContext(LayoutContext);
-  const { t } = useTranslation();
 
   return (
     <footer

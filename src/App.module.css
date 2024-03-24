@@ -1,9 +1,12 @@
 .main {
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
-  padding: 15px 10px 0px 0px;
+  margin-right: 0px;
+
+  padding: 0;
+  
   display: flex;
   flex-flow: row;
 
