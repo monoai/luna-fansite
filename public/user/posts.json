@@ -232,9 +232,9 @@
   ],
   [
     "u22",
-    "Luna, you are the window that brings light and warmth, in a dark and cold room.",
+    "Luna you are a window that brings light and warmth in a dark and cold room",
     "Tonasbabu",
-    null,
+    "Gaius_Vasilius",
     "Athens, Greece",
     37.984167,
     23.728056,
@@ -379,8 +379,8 @@
     "frozen2isperfect",
     null,
     "California, USA",
-    37.5,
-    -120.5,
+    37.94419750075404,
+    -121.22314453125,
     true,
     0
   ],
@@ -1108,7 +1108,7 @@
     28,
     -82,
     true,
-   1
+    1
   ],
   [
     "u102",
@@ -1131,5 +1131,27 @@
     -118.25,
     true,
     1
+  ],
+  [
+    "u104",
+    "Is hard to explain with words but hime is someone that pushes me to want do always better. Luna is a very suportive girl that I cant help but want to cheer for. I think seeing her happy makes me happy, so to me Luna is a source of happiness. A reason to protect what you appreciate. If I ever had the chance to tell her something is that I'm thankfull for finding her.",
+    "WallyWW",
+    null,
+    "Mar del Plata, Argentina",
+    -38,
+    -57.55,
+    true,
+    0
+  ],
+  [
+    "u105",
+    "Congratulations on the 1 million subscribers Luna-Hime!! I have been watching you since 2020 and your streams are always great fun. I love your talk streams, singing, and wide variety of game streams. I know you put so much effort into all your activities in Hololive that it is so inspiring. I am happy to be a Luknight now and in the future!",
+    "limeyabai",
+    "Limeyomnicron",
+    "California, USA",
+    35.02999636902566,
+    -116.49902343750001,
+    false,
+    0
   ]
 ]
