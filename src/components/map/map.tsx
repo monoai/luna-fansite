@@ -10,7 +10,7 @@ import {
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 //leaflet defaults broke on me somehow.... this is completely unesssary unless its broken like me
 import L, { Icon } from "leaflet";
