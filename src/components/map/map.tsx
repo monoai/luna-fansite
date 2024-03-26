@@ -100,11 +100,10 @@ export const Map = (props: MapProps) => {
         styles.map,
         isPortrait(orientation) ? styles.header : styles.standalone,
       ].join(" ")}
-      zoom={1.5}
+      zoom={1}
       center={[30, 0]}
       zoomSnap={0.5}
       maxZoom={7}
-      minZoom={1}
       maxBounds={[
         [-1000, -Infinity],
         [1200, Infinity],

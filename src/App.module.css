@@ -1,12 +1,10 @@
 .main {
   width: 100%;
-  align-items: flex-start;
-  justify-content: space-between;
 
   margin-right: 0px;
 
   padding: 0;
-  
+
   display: flex;
   flex-flow: row;
 
@@ -18,9 +16,6 @@
 }
 
 .mainLeft {
-  float: 1;
-
-  height: 100%;
   width: 100%;
 
   display: flex;

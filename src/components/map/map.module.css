@@ -4,18 +4,16 @@
 }
 
 .map.header {
-  min-height: 160px;
-  max-height: 35vh;
+  height: 28vh;
 
   margin: auto;
-  width: 95%;
+  width: calc(100% - 20px);
 }
 
 .map.standalone {
   margin-top: 125px;
-  margin-bottom: 105px;
+  margin-bottom: 110px;
   width: 100%;
-  height: 100%;
   flex: 1;
   margin-left: 10px;
 }

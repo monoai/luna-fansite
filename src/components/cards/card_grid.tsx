@@ -4,7 +4,6 @@ import { isPortrait, LayoutContext } from "../providers/layout";
 import { UserPost } from "../../posts";
 import { Card } from "./card";
 import L from "leaflet";
-import prompt_banner from "./img/prompt_banner.png";
 
 type CardGridProps = {
   posts: UserPost[];
@@ -41,7 +40,7 @@ export const CardGrid = (props: CardGridProps) => {
         isPortrait(orientation) ? styles.cardGridPortrait : styles.cardGrid
       }
     >
-      <img src={prompt_banner} className={styles.promptBanner}></img>
+      <div className={styles.promptBanner}></div>
       {posts}
     </div>
   );
