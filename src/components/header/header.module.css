@@ -64,7 +64,7 @@
     center top;
 
   background-size:
-    360px 150px,
+    85%,
     contain;
 
   flex-shrink: 0;
