@@ -35,6 +35,7 @@
     "Washington D.C., USA": "Washington D.C., USA",
 
     "Beidou, Changhua": "Beidou, Changhua",
+    "Keelung": "Keelung",
     "Miaoli": "Miaoli",
     "Taichung": "Taichung",
     "Tainan": "Tainan",
@@ -53,6 +54,7 @@
 
     "Ashton-Under-Lyne, England": "Ashton-Under-Lyne, England",
     "Hull, United Kingdom": "Hull, United Kingdom",
+    "United Kingdom": "United Kingdom",
 
     "France": "France",
     "Paris, France": "Paris, France",
@@ -64,6 +66,7 @@
     "Bandung, Indonesia": "Bandung, Indonesia",
     "Jakarta, Indonesia": "Jakarta, Indonesia",
 
+    "Seoul, South Korea": "Seoul, South Korea",
     "South Korea": "South Korea",
     "Busan, South Korea": "Busan, South Korea",
 
@@ -80,13 +83,16 @@
     "Thailand": "Thailand",
 
     "Finland": "Finland",
+    "Saxony, Germany": "Saxony, Germany",
     "Athens, Greece": "Athens, Greece",
+    "Cortes, Honduras": "Cortes, Honduras",
     "Hong Kong": "Hong Kong",
     "Hungary": "Hungary",
     "Trento, Italy": "Trento, Italy",
     "Malaysia": "Malaysia",
     "Auckland, New Zealand": "Auckland, New Zealand",
     "Lima, Peru": "Lima, Peru",
+    "Kraków, Poland": "Kraków, Poland",
     "Singapore": "Singapore",
     "Slovakia": "Slovakia",
     "Falkenberg, Sweden": "Falkenberg, Sweden",

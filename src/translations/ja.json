@@ -35,6 +35,7 @@
     "Washington D.C., USA": "アメリカ・ワシントンD.C.",
 
     "Beidou, Changhua": "彰化県・北斗鎮",
+    "Keelung": "基隆",
     "Miaoli": "苗栗",
     "Taichung": "台中",
     "Tainan": "台南",
@@ -53,6 +54,7 @@
 
     "Ashton-Under-Lyne, England": "イギリス・ライン",
     "Hull, United Kingdom": "イギリス・ハル",
+    "United Kingdom": "イギリス",
 
     "France": "フランス",
     "Paris, France": "フランス・パリ",
@@ -63,7 +65,8 @@
     "Indonesia": "インドネシア",
     "Bandung, Indonesia": "インドネシア・バンドン",
     "Jakarta, Indonesia": "インドネシア・ジャカルタ",
-
+    
+    "Seoul, South Korea": "韓国・ソウル特別市",
     "South Korea": "韓国",
     "Busan, South Korea": "韓国・釜山広域市",
     
@@ -80,13 +83,16 @@
     "Thailand": "タイ",
 
     "Finland": "フィンランド",
+    "Saxony, Germany": "ドイツ・ザクセン州",
     "Athens, Greece": "ギリシャ・アテネ",
+    "Cortes, Honduras": "ホンジュラス・コルテス県",
     "Trento, Italy": "イタリア・トレント",
     "Hong Kong": "香港",
     "Hungary": "ハンガリー",
     "Malaysia": "マレーシア",
     "Auckland, New Zealand": "ニュージーランド・オークランド",
     "Lima, Peru": "ペルー・リマ",
+    "Kraków, Poland": "ポーランド・クラクフ",
     "Singapore": "シンガポール",
     "Slovakia": "スロバキア",
     "Falkenberg, Sweden": "スウェーデン・ファルケンベリ",

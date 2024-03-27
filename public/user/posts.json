@@ -49,8 +49,8 @@
     "四才",
     "Tranquil_Tong",
     "Taoyuan",
-    25.16517336866393,
-    121.4208520368722,
+    24.996015742094006,
+    121.47583007812501,
     true,
     2
   ],
@@ -60,8 +60,8 @@
     "edgyfuu",
     "deedgyone",
     "Jakarta, Indonesia",
-    -6.175,
-    106.8275,
+    -6.195168442930952,
+    106.51245117187501,
     false,
     0
   ],
@@ -125,9 +125,9 @@
     "ママなのら",
     "ダークルーナイト",
     "Lu_knight_KR",
-    "South Korea",
-    36.28856319836239,
-    128.56185859667826,
+    "Seoul, South Korea",
+    37.566667,
+    126.966667,
     true,
     2
   ],
@@ -258,8 +258,8 @@
     "Veil",
     "Shih",
     "Taipei",
-    25.035838555635017,
-    121.84924459274274,
+    24.607069137709708,
+    121.81640625000001,
     true,
     1
   ],
@@ -544,8 +544,8 @@
     "Fish",
     "Fish00727763",
     "Taipei",
-    23.58412603264412,
-    121.27798337061942,
+    23.352342597581107,
+    121.2451171875,
     true,
     0
   ],
@@ -731,8 +731,8 @@
     "Tony🍬",
     "ttonyqazwsx",
     "Taipei",
-    24.0375,
-    121.5625,
+    23.77529123645138,
+    121.43188476562501,
     false,
     1
   ],
@@ -797,8 +797,8 @@
     "豆豆",
     "Dodoran_Pan",
     "Taipei",
-    24.5375,
-    121.6625,
+    24.21690953772176,
+    121.60766601562501,
     true,
     1
   ],
@@ -1097,7 +1097,7 @@
     46.066667,
     11.116667,
     false,
-    0
+    1
   ],
   [
     "u101",
@@ -1152,6 +1152,72 @@
     35.02999636902566,
     -116.49902343750001,
     false,
+    0
+  ],
+  [
+    "u106",
+    "Cute small beautiful little sister that need to be loved and protected",
+    "mimimo",
+    "mimimoichi",
+    "Jakarta, Indonesia",
+    -6.140554782450295,
+    107.138671875,
+    true,
+    0
+  ],
+  [
+    "u107",
+    "Luna is someone who I admire a lot and she often inspires me, especially with her musical performances! She always lifts my mood.",
+    "Joe",
+    null,
+    "United Kingdom",
+    54.36775852406841,
+    -1.5161132812500002,
+    false,
+    0
+  ],
+  [
+    "u108",
+    "姫森ルーナ様は、自分の仕えている姫様であり、そして心の中で一番特別な存在です",
+    "tentenza0518",
+    "HChihtsan90825",
+    "Keelung",
+    25.145284610685064,
+    121.84936523437501,
+    true,
+    2
+  ],
+  [
+    "u109",
+    "Luna-hime is one of the cutest and sweetest members in Hololive, I started following in 2021 when she was only reaching 400k. \n\nWhile watching her I was able to see her grow and show everyone how smart and talented she is! Seeing her work so hard everyday and surpass her herself makes me proud and happy! She has so many new friends that care for her! 🚑💋 🍬 ♌\n\nI always make sure to be there to watch every birthday and anniversary to see her progress, even if I can't watch her daily!\n\nPlease continue supporting her! Luna is the cutest adult genius professor! My loyalty belongs with Luna-tan!! LTL! CIJ!\n\n(🍬・o・)🪄︎︎𓈒𓂂𓏸☆",
+    "marshallleea",
+    "moonaito",
+    "Cortes, Honduras",
+    15.502778,
+    -88.013611,
+    true,
+    1
+  ],
+  [
+    "u110",
+    "面白いゲーム（特にレトロゲーム）を楽しむ、かわいいお姫様",
+    "Skoczek",
+    "szczoo17",
+    "Kraków, Poland",
+    50.061389,
+    19.937222,
+    true,
+    0
+  ],
+  [
+    "u111",
+    "Luna is someone I always want to root for. She's loyal to her friends which I admire. She is always cute but what I like the most is when she's acting cheeky or smug towards her friends or us Luknights. I wish I would understand Japanese better so I could understand Luna even better.",
+    "AwesomeAxolotlt",
+    "AwesomeAxolotlt",
+    "Saxony, Germany",
+    51.05,
+    13.74,
+    true,
     0
   ]
 ]
