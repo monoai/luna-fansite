@@ -13,7 +13,9 @@ export const Footer = () => {
   return (
     <footer
       className={
-        isPortrait(orientation) ? styles.pageFooterPortrait : styles.pageFooter
+        isPortrait(orientation?.orientation || null)
+          ? styles.pageFooterPortrait
+          : styles.pageFooter
       }
     >
       <a

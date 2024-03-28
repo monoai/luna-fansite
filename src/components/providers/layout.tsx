@@ -6,9 +6,12 @@ enum Orientation {
   Landscape,
 }
 
-export const LayoutContext = createContext<Orientation | null>(null);
+export const LayoutContext = createContext<{
+  orientation: Orientation;
+  width: number;
+} | null>(null);
 
-export function isPortrait(orientation: Orientation | null): boolean {
+export function isPortrait(orientation?: Orientation | null): boolean {
   return orientation! === Orientation.Portrait;
 }
 
@@ -19,17 +22,20 @@ export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
       : Orientation.Landscape;
   }
 
-  const [orientation, setOrientation] = useState<Orientation>(calculate());
+  const [orientation, setOrientation] = useState({
+    orientation: calculate(),
+    width: window.innerWidth,
+  });
 
   useEffect(() => {
     let callback: any;
     if (window.navigator.userAgent.includes("Mobile")) {
       callback = () => {
-        setOrientation(calculate());
+        setOrientation({ orientation: calculate(), width: window.innerWidth });
       };
     } else {
       callback = debounce(() => {
-        setOrientation(calculate());
+        setOrientation({ orientation: calculate(), width: window.innerWidth });
       }, 15);
     }
 
@@ -39,7 +45,7 @@ export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
   }, []);
 
   useEffect(() => {
-    document.body.className = isPortrait(orientation)
+    document.body.className = isPortrait(orientation.orientation)
       ? "portrait"
       : "landscape";
   }, [orientation]);

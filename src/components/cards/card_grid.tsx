@@ -37,7 +37,9 @@ export const CardGrid = (props: CardGridProps) => {
   return (
     <div
       className={
-        isPortrait(orientation) ? styles.cardGridPortrait : styles.cardGrid
+        isPortrait(orientation?.orientation || null)
+          ? styles.cardGridPortrait
+          : styles.cardGrid
       }
     >
       <div className={styles.promptBanner}></div>
