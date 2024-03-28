@@ -7,7 +7,6 @@ import {
   Marker,
   Tooltip,
   AttributionControl,
-  FeatureGroup,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -136,16 +135,7 @@ export const Map = (props: MapProps) => {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
-      <FeatureGroup
-        ref={(fg) => {
-          console.log(fg);
-          fg &&
-            fg.getBounds().isValid() &&
-            mapRef.current?.fitBounds(fg!.getBounds());
-        }}
-      >
         {createMarkers(props, mapRef, isPortrait(orientation))}
-      </FeatureGroup>
     </MapContainer>
   );
 };
