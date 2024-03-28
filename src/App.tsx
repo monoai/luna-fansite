@@ -21,40 +21,54 @@ export default function App() {
     });
   }, []);
 
-  const orientation = useContext(LayoutContext);
+  const { orientation } = useContext(LayoutContext) || { orientation: null };
 
   let cards = <CardGrid posts={posts} cardRefs={cardRefs} mapRef={mapRef} />;
 
-  let map = (
-    <WorldMap
-      posts={posts}
-      cardRefs={cardRefs}
-      innerRef={(m) => {
-        mapRef.current = m;
-      }}
-    />
-  );
-
-  if (isPortrait(orientation)) {
-    return (
-      <>
-        <CollapsibleHeader>{map}</CollapsibleHeader>
-        {cards}
-        <Footer />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Header />
-        <div className={styles.main}>
-          <div className={styles.mainLeft}>
-            {map}
+  return (
+    <LayoutContext.Consumer>
+      {(value) =>
+        isPortrait(orientation) ? (
+          <>
+            <CollapsibleHeader>
+              {
+                <WorldMap
+                  posts={posts}
+                  containerHeight={value?.width || window.innerWidth}
+                  containerWidth={value?.width || window.innerWidth}
+                  cardRefs={cardRefs}
+                  innerRef={(m) => {
+                    mapRef.current = m;
+                  }}
+                />
+              }
+            </CollapsibleHeader>
+            {cards}
             <Footer />
-          </div>
-          {cards}
-        </div>
-      </>
-    );
-  }
+          </>
+        ) : (
+          <>
+            <Header />
+            <div className={styles.main}>
+              <div className={styles.mainLeft}>
+                {
+                  <WorldMap
+                    posts={posts}
+                    containerHeight={value?.width || window.innerWidth}
+                    containerWidth={value?.width || window.innerWidth}
+                    cardRefs={cardRefs}
+                    innerRef={(m) => {
+                      mapRef.current = m;
+                    }}
+                  />
+                }
+                <Footer />
+              </div>
+              {cards}
+            </div>
+          </>
+        )
+      }
+    </LayoutContext.Consumer>
+  );
 }
