@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import shuffle from "lodash.shuffle";
 import { Header, CollapsibleHeader } from "./components/header/header";
 import { Map as WorldMap } from "./components/map/map";
 import { CardGrid } from "./components/cards/card_grid";
@@ -7,6 +8,9 @@ import { fetchPosts, UserPost } from "./posts";
 import L from "leaflet";
 import { useEffect, useRef, useState, useContext } from "react";
 import { isPortrait, LayoutContext } from "./components/providers/layout";
+
+const query = new URLSearchParams(document.location.search);
+const fixedOrder = query.get('fixed') != null;
 
 export default function App() {
   const mapRef: React.MutableRefObject<L.Map | undefined> = useRef(undefined);
@@ -17,6 +21,10 @@ export default function App() {
 
   useEffect(() => {
     fetchPosts((posts: UserPost[]) => {
+      if (!fixedOrder) {
+        posts = shuffle(posts);
+      }
+
       setPosts(posts);
     });
   }, []);

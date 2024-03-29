@@ -17,6 +17,7 @@
     "i18next-browser-languagedetector": "^7.2.0",
     "leaflet": "^1.9.4",
     "lodash.debounce": "^4.0.8",
+    "lodash.shuffle": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
@@ -57,6 +58,7 @@
     "@types/i18next": "^13.0.0",
     "@types/leaflet": "^1.9.8",
     "@types/lodash.debounce": "^4.0.9",
+    "@types/lodash.shuffle": "^4.2.9",
     "@types/react-i18next": "^8.1.0",
     "@types/react-modal-image": "^2.6.3",
     "prettier": "3.1.0"
