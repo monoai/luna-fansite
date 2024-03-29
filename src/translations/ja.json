@@ -29,10 +29,12 @@
     "Louisiana, USA": "アメリカ・ルイジアナ州",
     "Maryland, USA": "アメリカ・メリーランド州",
     "Nebraska, USA": "アメリカ・ネブラスカ州",
+    "Pennsylvania, USA": "アメリカ・ペンシルベニア",
     "New York, USA": "アメリカ・ニューヨーク州",
     "Texas, USA": "アメリカ・テキサス州",
     "Washington, USA": "アメリカ・ワシントン州",
     "Washington D.C., USA": "アメリカ・ワシントンD.C.",
+    "USA": "アメリカ",
 
     "Beidou, Changhua": "彰化県・北斗鎮",
     "Keelung": "基隆",
@@ -40,7 +42,7 @@
     "Taichung": "台中",
     "Tainan": "台南",
     "Taipei": "台北",
-    "Taoyuan": "桃園市",
+    "Taoyuan": "桃園",
 
     "Perth, Australia": "オーストラリア・パース市",
     "South Australia, Australia": "オーストラリア・南オーストラリア州",
