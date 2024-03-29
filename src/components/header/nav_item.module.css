@@ -1,5 +1,0 @@
-.navItem:not(:last-child)::after {
-  content: "•";
-  opacity: 0.5;
-  padding: 0 0.5rem;
-}

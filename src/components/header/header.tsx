@@ -1,7 +1,5 @@
 import styles from "./header.module.css";
 
-import { NavItem } from "./nav_item";
-import { useTranslation } from "react-i18next";
 import { useContext, useEffect, useState, PropsWithChildren } from "react";
 
 import { isPortrait, LayoutContext } from "../providers/layout";

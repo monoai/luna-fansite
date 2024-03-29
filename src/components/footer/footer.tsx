@@ -19,7 +19,9 @@ export const Footer = () => {
       <a
         href="https://www.youtube.com/@HimemoriLuna"
         className={styles.castle}
-      ></a>
+        target="_blank"
+        rel="noreferrer"
+    >@HimemoriLuna</a>
       <div className={styles.footerText}>
         <div>
           <Trans i18nKey="footer.text">Text{link}</Trans>

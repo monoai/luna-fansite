@@ -83,7 +83,7 @@ export const Card = React.forwardRef(
 
     return (
       <div ref={ref} className={styles.card}>
-        <img className={styles.pfp} src={getPfp(props.post)} />
+        <img className={styles.pfp} src={getPfp(props.post)} alt={styles.nickname}/>
 
         <div className={styles.container}>
           <div className={styles.nickname}>{props.post.nickname}</div>
