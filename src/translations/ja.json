@@ -34,6 +34,7 @@
     "Texas, USA": "アメリカ・テキサス州",
     "Washington, USA": "アメリカ・ワシントン州",
     "Washington D.C., USA": "アメリカ・ワシントンD.C.",
+    "Wisconsin, USA": "アメリカ・ウィスコンシン",
     "USA": "アメリカ",
 
     "Beidou, Changhua": "彰化県・北斗鎮",
@@ -44,6 +45,7 @@
     "Taipei": "台北",
     "Taoyuan": "桃園",
 
+    "Australia": "オーストラリア",
     "Perth, Australia": "オーストラリア・パース市",
     "South Australia, Australia": "オーストラリア・南オーストラリア州",
     "Sydney, Australia": "オーストラリア・シドニー市",
@@ -56,6 +58,7 @@
 
     "Ashton-Under-Lyne, England": "イギリス・ライン",
     "Hull, United Kingdom": "イギリス・ハル",
+    "London, United Kingdom": "イギリス・ロンドン",
     "United Kingdom": "イギリス",
 
     "France": "フランス",
@@ -73,7 +76,8 @@
     "Busan, South Korea": "韓国・釜山広域市",
     
     "Chihuahua, Mexico": "メキシコ・チワワ州",
-    "Oaxaca, México": "メキシコ・オアハカ州",
+    "Oaxaca, Mexico": "メキシコ・オアハカ州",
+    "Mexico": "メキシコ",
     
     "The Netherlands": "オランダ",
     "Zwolle, The Netherlands": "オランダ・ズヴォレ",

@@ -27,8 +27,8 @@
     "Kinney",
     "LightningKL",
     "Hong Kong",
-    22.5,
-    114.4,
+    22.62415215809042,
+    114.36767578125001,
     true,
     1
   ],
@@ -206,7 +206,7 @@
     35.63944,
     138.2598,
     true,
-    1
+    2
   ],
   [
     "u20",
@@ -345,7 +345,7 @@
     "Una luz en este túnel tan oscuro ",
     "Vhant ",
     "cVhant",
-    "Oaxaca, México",
+    "Oaxaca, Mexico",
     17.055,
     -96.655,
     true,
@@ -434,8 +434,8 @@
     "TsungLai",
     "bb28132009",
     "Hong Kong",
-    22.1,
-    114,
+    22.471954507739227,
+    114.99389648437501,
     false,
     1
   ],
@@ -566,8 +566,8 @@
     "YUZU",
     "pomelo10278",
     "Hong Kong",
-    22.5,
-    114,
+    22.380555501421533,
+    113.78540039062501,
     false,
     0
   ],
@@ -819,8 +819,8 @@
     "Kenny Kwok",
     "KKFFUNG455",
     "Hong Kong",
-    22.1,
-    114.4,
+    22.207749178410857,
+    114.66430664062501,
     true,
     2
   ],
@@ -1235,7 +1235,7 @@
     "u113",
     "Pink cute princess! When Lunatan like my tweet, I was so happy!",
     "Kbaza",
-    null,
+    "zoo29542673",
     "Taichung",
     22.563293244707797,
     120.55297851562501,
@@ -1278,12 +1278,122 @@
   [
     "u117",
     "Many years ago, when traveling in Japan, I got a Mini Pig Racer and it became one of my favorite toys. Then one day, I was so surprised to see Luna-tan also building a Pig Racer on her stream!\n\nThank you to Luna-tan for so many years of cheerful streams and surprises like this one! 🍬🌙",
-    "Koneko",
+    "koneko",
     null,
     "USA",
     36.778259,
     -119.417931,
     true,
     2
+  ],
+  [
+    "u118",
+    "Lunatan has a special place in every Luknights’ heart. After a hard, stressful and busy day; or perhaps a sad, tough and difficult times in real life; There is always a Luna stream to look up for in the end of the day. Congratulations on 1million subscribers Luna Hime, the luknights will always support you.",
+    "Excie",
+    null,
+    "Malaysia",
+    1.4610232806227543,
+    110.40161132812501,
+    true,
+    0
+  ],
+  [
+    "u119",
+    "Himemori Luna is a very hard-working icon in my mind.\n\nWatching Luna constantly improve herself to become a better idol has truly captivated me. Now that Luna has reached the milestone of 1 million subscribers, I am genuinely moved. Hope Luna will continue to maintain optimism and a positive outlook, bringing even more joy to the world in the future! Thank you for bringing happiness to us over these years.\n\nLTL LTL LTL", 
+    "WEIFF",
+    null,
+    "Taipei",
+    23.75518176611264,
+    120.98144531250001,
+    true,
+    1
+  ],
+  [
+    "u120",
+    "1 MILLION BILLION TRILLION SUBSCRIBERS CONGRATULATIONS LUNA-TAN\n\nHime-sama will always be a reason why I continue to move forward towards whatever life throws at me. The hardest working, crazy talented, CUTEST, and wonderful IDOL princess will always be an inspiration to me and Lu-Knights all over the world and that feeling will never stop for as long as I live. I may not be around or am as crazy at the moment as much as I used to, but I always look back to Luna as why I continue to strive to be better every day. \n\nThank you Himemori Luna for being a part of my life and I will continue to support you as long as I breath from this body of mine. \n\nI will forever and always be a LU-KNIGHT.\n\nCUTE IS JUSTICE. LOYALTY TO LUNA. FOREVER.",
+    "DyDy",
+    "DyDyOrange",
+    "California, USA",
+    33.23868752757414,
+    -117.19116210937501,
+    true,
+    2
+  ],
+  [
+    "u121",
+    "best pink princess.",
+    "ImportedRage",
+    null,
+    "Hong Kong",
+    22.085639901650328,
+    114.16992187500001,
+    false,
+    0
+  ],
+  [
+    "u122",
+    "One-and-only oshi!",
+    "NeruTe",
+    null,
+    "South Korea",
+    36.63316209558658,
+    128.07861328125003,
+    false,
+    0
+  ],
+  [
+    "u123",
+    "Luna tries so hard and provides so much entertainment to Luknights. It makes me try my best too!",
+    "Sillipenda",
+    null,
+    "Wisconsin, USA",
+    44.85699947187943,
+    -89.7610213227949,
+    false,
+    0
+  ],
+  [
+    "u124",
+    "Luna is my oshi and i love her very much, you introduced me to hololive as a whole and i love all the effort you've put into become the idol you've become today. I'm so proud of you and i'm so very very very happy you're my oshi.",
+    "HoboCat",
+    "HoboDragon",
+    "California, USA",
+    34.027890469310634,
+    -116.42573788867008,
+    true,
+    1
+  ],
+  [
+    "u125",
+    "Congrats on 1 million! I don't watch you often but as a kenzoku it's always a blast, Your LuKnight community is always so nice to interact with and i wish you the best 1 million sub stream,\n\nFrom a Local Kenzoku",
+    "Dynamo173",
+    "Dynamo173",
+    "Australia",
+    -19.70218679091337,
+    143.27333197563038,
+    true,
+    0
+  ],
+  [
+    "u126",
+    "デビュー当時から見ていて、ずっとかわいいと思っていた！笑い声もめちゃすき！毎日楽しそうにしているのを見ると癒される、そしてルーナたんのピアノ／エレクトーンを弾くのが大好きだ！ルーナたん出会えてとてもうれしいし、ルーナたんがホロライブのみんなにも出会えてよかった！毎日笑いと楽しい配信でぼくを癒してくれてありがとう！これからもずっと応援していますなのら！",
+    "AshExia",
+    "ExiaAsh",
+    "London, United Kingdom",
+    51.532410248044144,
+    -0.14134296797652326,
+    true,
+    1
+  ],
+  [
+    "u127",
+    "She's the shining light in my soul, ever since I saw her playing dark souls, I knew she had a special talent, to try harder and never give up, no matter how hard it is, making me feel that I as well should never give up on anything even if it looks impossible. Thanks to her I've accomplished many things in life that I once thought I'll never be able to do. And I cannot be more happy that you reach 1 million subscribers, because this shows all the efforts that you put in this journey.",
+    "its_loli",
+    "it_is_loli",
+    "Mexico",
+    26.071775677316857,
+    -101.72076439151432,
+    true,
+    1
   ]
 ]

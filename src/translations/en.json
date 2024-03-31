@@ -34,6 +34,7 @@
     "Texas, USA": "Texas, USA",
     "Washington, USA": "Washington, USA",
     "Washington D.C., USA": "Washington D.C., USA",
+    "Wisconsin, USA": "Wisconsin, USA",
     "USA": "USA",
 
     "Beidou, Changhua": "Beidou, Changhua",
@@ -44,6 +45,7 @@
     "Taipei": "Taipei",
     "Taoyuan": "Taoyuan",
 
+    "Australia": "Australia",
     "Perth, Australia": "Perth, Australia",
     "South Australia, Australia": "South Australia, Australia",
     "Sydney, Australia": "Sydney, Australia",
@@ -56,6 +58,7 @@
 
     "Ashton-Under-Lyne, England": "Ashton-Under-Lyne, England",
     "Hull, United Kingdom": "Hull, United Kingdom",
+    "London, United Kingdom": "London, United Kingdom",
     "United Kingdom": "United Kingdom",
 
     "France": "France",
@@ -73,7 +76,8 @@
     "Busan, South Korea": "Busan, South Korea",
 
     "Chihuahua, Mexico": "Chihuahua, Mexico",
-    "Oaxaca, México": "Oaxaca, México",
+    "Oaxaca, Mexico": "Oaxaca, Mexico",
+    "Mexico": "Mexico",
     
     "The Netherlands": "The Netherlands",
     "Zwolle, The Netherlands": "Zwolle, The Netherlands",
