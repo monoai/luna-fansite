@@ -34,6 +34,8 @@ type MapProps = {
   posts: UserPost[];
   cardRefs: Map<string, React.RefObject<HTMLDivElement>>;
   innerRef?: (map: L.Map) => void;
+  containerWidth: number;
+  containerHeight: number;
 };
 
 function createMarkers(
@@ -88,22 +90,29 @@ function createMarkers(
 
 export const Map = (props: MapProps) => {
   const mapRef: React.MutableRefObject<L.Map | null> = React.useRef(null);
-  const orientation = useContext(LayoutContext);
+  const { orientation, width } = useContext(LayoutContext) || {};
 
   return (
     <MapContainer
       ref={(m) => {
         props.innerRef?.(m!);
         mapRef.current = m;
+        const newZoom = Math.log2(Math.max(width || window.innerWidth) / 256);
+        if (m && m?.getZoom() < newZoom) {
+          m.setZoom(newZoom);
+          m.setMinZoom(newZoom);
+        }
       }}
       className={[
         styles.map,
-        isPortrait(orientation) ? styles.header : styles.standalone,
+        isPortrait(orientation || null) ? styles.header : styles.standalone,
       ].join(" ")}
       zoom={1}
+      maxBoundsViscosity={1}
       center={[30, 0]}
-      zoomSnap={0.5}
+      zoomSnap={0.1}
       maxZoom={7}
+      minZoom={Math.log2(Math.max(width || window.innerWidth) / 256)}
       maxBounds={[
         [-1000, -Infinity],
         [1200, Infinity],
@@ -112,6 +121,7 @@ export const Map = (props: MapProps) => {
       inertia={true}
       inertiaDeceleration={4000}
       worldCopyJump={true}
+      boundsOptions={{ animate: false }}
       whenReady={() => {
         setTimeout(() => {
           if (mapRef.current) {
@@ -125,7 +135,7 @@ export const Map = (props: MapProps) => {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
-      {createMarkers(props, mapRef, isPortrait(orientation))}
+        {createMarkers(props, mapRef, isPortrait(orientation))}
     </MapContainer>
   );
 };

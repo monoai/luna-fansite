@@ -63,9 +63,7 @@
     center 10px,
     center top;
 
-  background-size:
-    85%,
-    contain;
+  background-size: 85%, contain;
 
   flex-shrink: 0;
 

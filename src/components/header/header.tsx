@@ -19,7 +19,7 @@ export const CollapsibleHeader = (props: PropsWithChildren<{}>) => {
       setScrollY(window.scrollY);
     };
 
-    if (isPortrait(orientation)) {
+    if (isPortrait(orientation?.orientation || null)) {
       window.addEventListener("scroll", onScroll);
 
       return () => {
