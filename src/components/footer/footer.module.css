@@ -60,6 +60,8 @@ a:active {
   height: 35px;
   line-height: 12px;
 
+  pointer-events: auto;
+
   display: flex;
   align-items: center;
 
