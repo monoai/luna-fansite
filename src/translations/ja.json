@@ -29,8 +29,9 @@
     "Louisiana, USA": "アメリカ・ルイジアナ州",
     "Maryland, USA": "アメリカ・メリーランド州",
     "Nebraska, USA": "アメリカ・ネブラスカ州",
-    "Pennsylvania, USA": "アメリカ・ペンシルベニア",
+    "New Jersey, USA": "アメリカ・ニュージャージー",
     "New York, USA": "アメリカ・ニューヨーク州",
+    "Pennsylvania, USA": "アメリカ・ペンシルベニア",
     "Texas, USA": "アメリカ・テキサス州",
     "Washington, USA": "アメリカ・ワシントン州",
     "Washington D.C., USA": "アメリカ・ワシントンD.C.",
@@ -70,6 +71,7 @@
     "Indonesia": "インドネシア",
     "Bandung, Indonesia": "インドネシア・バンドン",
     "Jakarta, Indonesia": "インドネシア・ジャカルタ",
+    "Serang, Indonesia": "セラン, インドネシア",
     
     "Seoul, South Korea": "韓国・ソウル特別市",
     "South Korea": "韓国",
