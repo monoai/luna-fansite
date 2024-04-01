@@ -21,7 +21,9 @@ export const Footer = () => {
         className={styles.castle}
         target="_blank"
         rel="noreferrer"
-    >@HimemoriLuna</a>
+      >
+        @HimemoriLuna
+      </a>
       <div className={styles.footerText}>
         <div>
           <Trans i18nKey="footer.text">Text{link}</Trans>

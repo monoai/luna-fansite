@@ -12,6 +12,8 @@ import { useTranslation } from "react-i18next";
 
 type CardProps = {
   post: UserPost;
+  index: number;
+  total: number;
   onClick: () => void;
 };
 
@@ -37,7 +39,7 @@ function attachmentsSection(post: UserPost) {
     images.push(attachment_thumb);
   }
 
-  return images;
+  return <div className={styles.attachments}>{images}</div>;
 }
 
 export const Card = React.forwardRef(
@@ -81,9 +83,15 @@ export const Card = React.forwardRef(
       detailsSection = <div style={{ textAlign: "right" }}>{xButton}</div>;
     }
 
+    let countCaption = props.index + 1 + " / " + props.total;
+
     return (
       <div ref={ref} className={styles.card}>
-        <img className={styles.pfp} src={getPfp(props.post)} alt={styles.nickname}/>
+        <img
+          className={styles.pfp}
+          src={getPfp(props.post)}
+          alt={styles.nickname}
+        />
 
         <div className={styles.container}>
           <div className={styles.nickname}>{props.post.nickname}</div>
@@ -93,6 +101,8 @@ export const Card = React.forwardRef(
           <p className={styles.message}>{props.post.message}</p>
 
           {attachmentsSection(props.post)}
+
+          <div className={styles.counter}>{countCaption}</div>
         </div>
       </div>
     );

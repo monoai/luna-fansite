@@ -7,6 +7,7 @@ import {
   Marker,
   Tooltip,
   AttributionControl,
+  useMap,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -67,7 +68,7 @@ function createMarkers(
                 top:
                   cardDiv.offsetTop -
                   cardDiv.parentElement!.offsetTop +
-                  (isPortrait ? 150 : -110),
+                  (isPortrait ? 150 : -30),
                 behavior: "smooth",
               });
             },
@@ -86,6 +87,22 @@ function createMarkers(
     });
 }
 
+function ZoomSetter() {
+  const map = useMap();
+
+  let rect = map.getContainer().getBoundingClientRect();
+
+  let newZoom = 0.0;
+  if (rect.height > 250) {
+    newZoom = Math.log2(Math.max(rect.width, rect.height) / 250);
+  }
+
+  map.setMinZoom(newZoom);
+  map.setZoom(newZoom);
+
+  return null;
+}
+
 export const Map = (props: MapProps) => {
   const mapRef: React.MutableRefObject<L.Map | null> = React.useRef(null);
   const orientation = useContext(LayoutContext);
@@ -101,12 +118,13 @@ export const Map = (props: MapProps) => {
         isPortrait(orientation) ? styles.header : styles.standalone,
       ].join(" ")}
       zoom={1}
-      center={[30, 0]}
-      zoomSnap={0.5}
+      center={[20, 0]}
+      zoomSnap={0.1}
       maxZoom={7}
+      maxBoundsViscosity={1}
       maxBounds={[
-        [-1000, -Infinity],
-        [1200, Infinity],
+        [-90, -180],
+        [90, 180],
       ]}
       attributionControl={false}
       inertia={true}
@@ -126,6 +144,7 @@ export const Map = (props: MapProps) => {
         attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       />
       {createMarkers(props, mapRef, isPortrait(orientation))}
+      <ZoomSetter></ZoomSetter>
     </MapContainer>
   );
 };

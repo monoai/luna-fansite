@@ -10,7 +10,7 @@ import { useEffect, useRef, useState, useContext } from "react";
 import { isPortrait, LayoutContext } from "./components/providers/layout";
 
 const query = new URLSearchParams(document.location.search);
-const fixedOrder = query.get('fixed') != null;
+const fixedOrder = query.get("fixed") != null;
 
 export default function App() {
   const mapRef: React.MutableRefObject<L.Map | undefined> = useRef(undefined);

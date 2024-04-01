@@ -1,35 +1,30 @@
 import { createContext, useEffect, useState } from "react";
 import debounce from "lodash.debounce";
 
-enum Orientation {
-  Portrait = 1,
-  Landscape,
-}
+type Size = { width: number; height: number };
 
-export const LayoutContext = createContext<Orientation | null>(null);
+export const LayoutContext = createContext<Size | null>(null);
 
-export function isPortrait(orientation: Orientation | null): boolean {
-  return orientation! === Orientation.Portrait;
+export function isPortrait(size: Size | null): boolean {
+  return size!.width < 720;
 }
 
 export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
-  function calculate() {
-    return window.innerWidth < 720
-      ? Orientation.Portrait
-      : Orientation.Landscape;
+  function getSize() {
+    return { width: window.innerWidth, height: window.innerHeight };
   }
 
-  const [orientation, setOrientation] = useState<Orientation>(calculate());
+  const [size, setSize] = useState<Size>(getSize());
 
   useEffect(() => {
     let callback: any;
     if (window.navigator.userAgent.includes("Mobile")) {
       callback = () => {
-        setOrientation(calculate());
+        setSize(getSize());
       };
     } else {
       callback = debounce(() => {
-        setOrientation(calculate());
+        setSize(getSize());
       }, 15);
     }
 
@@ -39,12 +34,8 @@ export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
   }, []);
 
   useEffect(() => {
-    document.body.className = isPortrait(orientation)
-      ? "portrait"
-      : "landscape";
-  }, [orientation]);
+    document.body.className = isPortrait(size) ? "portrait" : "landscape";
+  }, [size]);
 
-  return (
-    <LayoutContext.Provider value={orientation} children={props.children} />
-  );
+  return <LayoutContext.Provider value={size} children={props.children} />;
 };

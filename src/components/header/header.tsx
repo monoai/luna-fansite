@@ -9,7 +9,7 @@ export const Header = () => {
 };
 
 export const CollapsibleHeader = (props: PropsWithChildren<{}>) => {
-  const ANIM_THRESHOLD = 140;
+  const ANIM_THRESHOLD = 130;
 
   const [scrollY, setScrollY] = useState(0.0);
   const orientation = useContext(LayoutContext);
@@ -33,19 +33,17 @@ export const CollapsibleHeader = (props: PropsWithChildren<{}>) => {
   return (
     <>
       <div className={styles.collapsibleHeader}>
-        <div className={styles.logo}>
-          <div
-            className={styles.lunaLogo}
-            style={{ opacity: scrollY > ANIM_THRESHOLD ? 0.0 : 1.0 }}
-          ></div>
-          <div
-            className={styles.collapsedLogo}
-            style={{ opacity: scrollY < ANIM_THRESHOLD ? 0.0 : 1.0 }}
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          ></div>
-        </div>
+        <div
+          className={styles.logo}
+          style={{ opacity: scrollY > ANIM_THRESHOLD ? 0.0 : 1.0 }}
+        ></div>
+        <div
+          className={styles.collapsedLogo}
+          style={{ opacity: scrollY < ANIM_THRESHOLD ? 0.0 : 1.0 }}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        ></div>
         {props.children}
       </div>
     </>

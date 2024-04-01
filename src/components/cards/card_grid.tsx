@@ -24,6 +24,8 @@ export const CardGrid = (props: CardGridProps) => {
         ref={cardRef}
         key={"card" + i}
         post={post}
+        index={i}
+        total={props.posts.length}
         onClick={() => {
           if (post.location) {
             let location = post.location!;
