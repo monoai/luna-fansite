@@ -58,7 +58,12 @@ function createMarkers(
           // draggable
           position={[post.location!.lat, post.location!.long]}
           eventHandlers={{
-            // dragend: (x) => console.log(post.id, x.target._latlng.lat + ',',  x.target._latlng.lng ),
+            // dragend: (x) =>
+            //   console.log(
+            //     post.id,
+            //     x.target._latlng.lat + ",",
+            //     x.target._latlng.lng,
+            //   ),
             click: () => {
               const cardDiv = props.cardRefs.get(post.id)!.current!;
 
@@ -118,13 +123,13 @@ export const Map = (props: MapProps) => {
         isPortrait(orientation) ? styles.header : styles.standalone,
       ].join(" ")}
       zoom={1}
-      center={[20, 0]}
+      center={[20, 20]}
       zoomSnap={0.1}
       maxZoom={7}
       maxBoundsViscosity={1}
       maxBounds={[
-        [-90, -180],
-        [90, 180],
+        [-90, -1000],
+        [90, 1000],
       ]}
       attributionControl={false}
       inertia={true}

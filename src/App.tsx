@@ -49,11 +49,13 @@ export default function App() {
 
   switch (getLayoutType(orientation)) {
     case LayoutType.Portrait: {
-      return <>
-        <CollapsibleHeader>{map}</CollapsibleHeader>
-        {cards}
-        <Footer />
-      </>;
+      return (
+        <>
+          <CollapsibleHeader>{map}</CollapsibleHeader>
+          {cards}
+          <Footer />
+        </>
+      );
     }
     case LayoutType.Landscape: {
       return (
