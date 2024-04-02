@@ -7,7 +7,11 @@ import { Footer } from "./components/footer/footer";
 import { fetchPosts, UserPost } from "./posts";
 import L from "leaflet";
 import { useEffect, useRef, useState, useContext } from "react";
-import { isPortrait, LayoutContext } from "./components/providers/layout";
+import {
+  LayoutType,
+  LayoutContext,
+  getLayoutType,
+} from "./components/providers/layout";
 
 const query = new URLSearchParams(document.location.search);
 const fixedOrder = query.get("fixed") != null;
@@ -43,26 +47,36 @@ export default function App() {
     />
   );
 
-  if (isPortrait(orientation)) {
-    return (
-      <>
+  switch (getLayoutType(orientation)) {
+    case LayoutType.Portrait: {
+      return <>
         <CollapsibleHeader>{map}</CollapsibleHeader>
         {cards}
         <Footer />
-      </>
-    );
-  } else {
-    return (
-      <>
-        <Header />
-        <div className={styles.main}>
-          <div className={styles.mainLeft}>
-            {map}
-            <Footer />
+      </>;
+    }
+    case LayoutType.Landscape: {
+      return (
+        <>
+          <Header />
+          <div className={styles.main}>
+            <div className={styles.mainLeft}>
+              {map}
+              <Footer />
+            </div>
+            {cards}
           </div>
-          {cards}
-        </div>
-      </>
-    );
+        </>
+      );
+    }
+    case LayoutType.UnusableLandscape: {
+      return (
+        <>
+          <Header />
+          <div className={styles.rotateHint}></div>
+          <Footer />
+        </>
+      );
+    }
   }
 }

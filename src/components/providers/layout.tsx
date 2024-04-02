@@ -3,10 +3,30 @@ import debounce from "lodash.debounce";
 
 type Size = { width: number; height: number };
 
+export enum LayoutType {
+  Portrait,
+  UnusableLandscape,
+  Landscape,
+}
+
+function isMobile(): boolean {
+  return window.navigator.userAgent.includes("Mobile");
+}
+
 export const LayoutContext = createContext<Size | null>(null);
 
 export function isPortrait(size: Size | null): boolean {
-  return size!.width < 720;
+  return getLayoutType(size) === LayoutType.Portrait;
+}
+
+export function getLayoutType(size: Size | null): LayoutType {
+  if (isMobile() && window.innerHeight < 500) {
+    return LayoutType.UnusableLandscape;
+  } else if (window.innerWidth > 720) {
+    return LayoutType.Landscape;
+  } else {
+    return LayoutType.Portrait;
+  }
 }
 
 export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
@@ -18,7 +38,7 @@ export const LayoutProvider = (props: React.PropsWithChildren<{}>) => {
 
   useEffect(() => {
     let callback: any;
-    if (window.navigator.userAgent.includes("Mobile")) {
+    if (isMobile()) {
       callback = () => {
         setSize(getSize());
       };
