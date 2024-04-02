@@ -86,6 +86,7 @@
 
     "Bacolod City, Philippines": "Bacolod City, Philippines",
     "Manila, Philippines": "Manila, Philippines",
+    "Pampanga, Philippines": "Pampanga, Philippines",
     "Philippines": "Philippines",
 
     "Bangkok, Thailand": "Bangkok, Thailand",
@@ -105,7 +106,9 @@
     "Singapore": "Singapore",
     "Slovakia": "Slovakia",
     "Falkenberg, Sweden": "Falkenberg, Sweden",
-    "Hanoi, Vietnam": "Hanoi, Vietnam"
+    "Hanoi, Vietnam": "Hanoi, Vietnam",
+    "Chile": "Chile",
+    "Belgium": "Belgium"
   },
   "interface": {
     "footer": {

@@ -86,6 +86,7 @@
 
     "Bacolod City, Philippines": "フィリピン・バコロド市",
     "Manila, Philippines": "フィリピン・マニラ",
+    "Pampanga, Philippines": "フィリピン・パンパンガ",
     "Philippines": "フィリピン",
 
     "Bangkok, Thailand": "タイ・バンコク",
@@ -105,7 +106,9 @@
     "Singapore": "シンガポール",
     "Slovakia": "スロバキア",
     "Falkenberg, Sweden": "スウェーデン・ファルケンベリ",
-    "Hanoi, Vietnam": "ベトナム・ハノイ"
+    "Hanoi, Vietnam": "ベトナム・ハノイ",
+    "Chile": "チリ",
+    "Belgium": "ベルギー"
   },
   "interface": {
     "footer": {

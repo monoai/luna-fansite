@@ -1,6 +1,6 @@
 .card {
   margin-right: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
   padding: 10px 15px 20px 10px;
   background: #ffeff6;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@
 
 .message {
   white-space: pre-wrap;
-  margin: 20px 0px;
+  margin: 15px 0px 10px 0px;
 }
 
 .map_button {

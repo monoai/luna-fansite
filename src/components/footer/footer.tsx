@@ -6,7 +6,9 @@ import { isPortrait, LayoutContext } from "../providers/layout";
 
 export const Footer = () => {
   let link = (
-    <a href="https://discord.gg/cuteisjustice">Luna's Candy Kingdom</a>
+    <a href="https://discord.gg/cuteisjustice" target="_blank" rel="noreferrer">
+      Luna's Candy Kingdom
+    </a>
   );
   const orientation = useContext(LayoutContext);
 
