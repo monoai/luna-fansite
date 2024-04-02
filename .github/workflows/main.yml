@@ -1,5 +1,8 @@
 name: Deploy to S3
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
   s3_deploy:
     runs-on: ubuntu-latest
